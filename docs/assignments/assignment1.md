@@ -62,7 +62,11 @@ __Privacy In Relation to an Application__
 
 During the interviews, I asked for consent to record, and then took notes and direct quotes when listening back to it.
 
-** TODO: ATTACH PDF HERE **
+Attached are my PDF notes for both interviews.
+
+
+
+<a href="/portfolio-sabpdo/assets/Raw-Interview-Notes.pdf">Download Raw Interview Notes</a>.
 
 
 
