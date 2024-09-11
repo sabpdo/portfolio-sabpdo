@@ -9,7 +9,7 @@ layout: doc
 
 ### Hunch:
 
-I aim to design a social media app that empowers older/elderly users to confidently identify and manage privacy and security protections, without overwhelming them or compromising their sense of trust and connection, as they are often more vulnerable to these threats.
+I aim to design a social media app that addresses the pitfalls of current social media apps by mitigating common privacy and security concerns/threats that older/elderly users face. The app should empower elderly users to confidently identify and manage privacy and security protections, without overwhelming them or compromising their sense of trust and connection.
 
 ### Who I Am Interviewing & Why:
 
@@ -86,6 +86,7 @@ A notable contradiction in Tam’s experience is her awareness of privacy issues
 ## Design Opportunities
 
 1. Education & Visibility of Privacy Policies
+
 One feature suggestion is the creation of an interactive chatbot that is trained over the terms and conditions of a website/application and the privacy matters. This chat bot would be able to summarize current privacy and data policies and answer questions that the user has. It could also easily walk users through their privacy settings.
 
 Many users, including Lauren, expressed frustration with lengthy privacy descriptions, stating, “It is hard to read all the terms and conditions.” An interactive chatbot would bridge this gap by offering easily digestible information and guiding users through the process, ensuring they understand their privacy options and make informed decisions. 
@@ -97,11 +98,13 @@ The app should include a credibility score indicator for users, displayed on a d
 Having a visible flag can easily allow for users to establish credibility (or lack of credibility) for other users on the app for users like Lauren rather than requiring users to manually combing through and verifying everybody they interact with. Posts from users with high reports or low trustworthiness can be deprioritized in the feed algorithm. This feature is essential for users like Tam, who may struggle with assessing the credibility of individuals.
 
 3. The Ease of Forgetting: Privacy Alerts
+
 Automatic alerts can be integrated into a social media application to notify users when unusual activity is detected or significant change in privacy settings occurs. These alerts can be configured to occur periodically, encouraging users to recheck and adjust their privacy settings as needed. 
 
 Automatic alerts help address the common issue of users forgetting to manage their privacy settings, such as Lauren, who admitted to not frequently revisiting her privacy settings. Regular, contextual alerts can ensure that users stay informed about potential issues and maintain their desired level of privacy without having to actively monitor settings constantly.
 
 4. Trusted Contact Feature
+
 Users should be able to designate trusted contacts who can assist with managing privacy settings and address security issues. Trusted contacts could receive notifications if unusual activity is detected, or help prevent risky actions such as clicking on suspicious links or sending money to unknown recipients.
 
 For users like Tam, having a trusted contact manage privacy settings may make management and mitigating scams easier if a trusted contact, like a family member, has more knowledge.
