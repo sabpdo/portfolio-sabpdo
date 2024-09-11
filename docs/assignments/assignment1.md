@@ -66,7 +66,7 @@ Attached are my PDF notes for both interviews.
 
 
 
-<a href="/assets/Raw-Interview-Notes.pdf">Download Raw Interview Notes</a>.
+[Download Raw Interview Notes]( /assets/interview_notes.pdf )
 
 
 
