@@ -66,7 +66,7 @@ Attached are my PDF notes for both interviews.
 
 
 
-<a href="/portfolio-sabpdo/assets/Raw-Interview-Notes.pdf">Download Raw Interview Notes</a>.
+<a href="/assets/Raw-Interview-Notes.pdf">Download Raw Interview Notes</a>.
 
 
 
