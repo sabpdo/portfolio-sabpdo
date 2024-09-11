@@ -65,9 +65,7 @@ During the interviews, I asked for consent to record, and then took notes and di
 Attached are my PDF notes for both interviews.
 
 
-
-[Download Raw Interview Notes]( /assets/interview_notes.pdf )
-
+<iframe src="https://drive.google.com/file/d/1y2o0Ad63FSSiu1kRz8d_0YiCYtwj4PoZ/preview" width="640" height="480" allow="autoplay"></iframe>
 
 
 ## Interview Report
