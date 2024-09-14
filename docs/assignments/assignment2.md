@@ -17,13 +17,11 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
 
 ## Scrapbook of comparables
 
-
-
 ### Duolingo
 
 ![picture description](/assets/images/A2/duolingo_gamification.jpg)
 
-At the core concept of Duolingo lays its gamification of language learning. Could we gamify social interaction and good privacy habits? 
+At the core concept of Duolingo lays its gamification of language learning. Could we integrate periodic reminders and streak tracking to keep track of good privacy habits?
 
 ### Lyft
 
@@ -44,18 +42,51 @@ Family tracking and notifications on Life360 (Location & Battery): could we appl
 
 Randomly generated names on reddit: could we apply this idea to adding friends on a social media app? In particular, when messaging a new user, one would have to outsource the user by a uniquely generated encrypted username.
 
+### Beli
+
+![picture description](/assets/images/A2/beli_ranking.jpg)
+
+Ranking of restaurants on Beli: could we have a ranking of the top champions of privacy/posts/connections?
+
+
+### Venmo
+
+![picture description](/assets/images/A2/venmo_feed.png)
+
+Activity feed on Venmo
+
+
+### When2meet
+
+![picture description](/assets/images/A2/w2m_timezone.png)
+
+Activity feed: 
 
 ## Feature Ideas Brainstrom
 
 
 
-### Feature 1:
+### Feature 1: Big Text & Big Buttons
 
-### Feature 2:
+### Feature 2: Simple & Intuitive UI
 
-### Feature 3:
+### Feature 3: Verification for Users (Background check, ID)
 
-### Feature 4: 
+### Feature 4: Location based interest sharing
+
+### Feature 5: location base friendly
+
+### Feature 6: Voice command integration
+
+### Feature 7: Video & Audio Calls
+
+### Feature 8: Chatbots to summarize information on privacy
+
+### Feature 9: Leaderboard on how champion privacy or streaks if they keep updated 
+
+### Feature 10: Memory Lane/ Old Videos Nostalgia
+
+### Feature 11: 
 
 ## VSD Analysis
 
