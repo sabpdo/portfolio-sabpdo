@@ -49,6 +49,11 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
     <p>Timezones on When2Meet: Having options for people and users from different regions is critical. Can we apply this idea to having multiple language and text size options on a website depending on the user's preferences?</p>
   </div>
 
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/bereal_photoroulette.png" alt="Bereal photoroulette" width="100%">
+    <p>Photoroulette on BeReal where a randomly chosen photo is posted: can we apply this idea to perhaps implementing a feature where randomly chosen friends are chosen to catch up with or a random photo shows up on a timeline for nostalgia? </p>
+  </div>
+
 </div>
 
 
@@ -59,7 +64,9 @@ Collaborators: I helped brainstormed with Emily Chen.
 ### Feature 1: Adjustable Text Size
 A big issue for older users tends to be the ability to read easily the text on applications/websites. A solution to this could be an adjustable slider bar that allows a user to adjust the page to the text size that would be most convenient for them.
 
-### Feature 2: 
+### Feature 2: Automatically scheduled friend/family check-in
+
+Sometimes keeping consistent contact with loved ones can be hard, especially for seniors trying to connect with the younger generation, so the app could automatically schedule periodic check-ins/get togethers on two parties' calendars.
 
 ### Feature 3: Background Verification for Users 
 Users could have a verified feature tag that is only given once they do a background check, facial recognition check, or friend referal/validation.
@@ -76,28 +83,47 @@ A commmunity board for social events based off one's location and interests can 
 
 Texting/typing can be difficult for older users, so voice commands can be integrated to do basic functionality on the app. 
 
-### Feature 7: Video & Audio Calls - Location Based
+### Feature 7: Chatbot trained over privacy settings
 
+Navigating the privacy settings can be confusing, but a chatbot that can easily help answer users' questions and guide them through the process of setting it up can facilitate the process.
 
+### Feature 8: AI Powered Summary of Privacy & Consent Information
 
+Reading through consent forms and privacy policies can be lengthy, but having an AI powered summary can reduce the legal jargon and make it more readable for elderly users.
 
-### Feature 8: Chatbots to summarize information on privacy
+### Feature 9: Privacy Habit Notifications
 
+Sometimes remembering to check one's privacy settings as policies change is hard to remember, and thus an automated notification system to reminder users to do so can help recall. 
 
+### Feature 10: Memory Lane/ Old Videos Nostalgia - Random Selection from Camera Roll
 
-### Feature 9: Leaderboard on how champion privacy or streaks if they keep updated 
+Once a month, a random photo and/or video will be selected from a person's camera roll and be posted on their personal activity feedback to allow nostalgic reflection.
 
-### Feature 10: Memory Lane/ Old Videos Nostalgia - random selection from camerea roll
+### Feature 11: Encrypted Friend Addition
 
-### Feature 11: Encrypted friend addition -- only through qr code, or a password
+Users can only add and find friends through a specially generated code/password/QR code. This prevents elder users from getting friend requests from random users who may be phishers.
 
-### Feature 12: Family approved changes to privacy settings (e.g. can't send money or not)
+### Feature 12: Family approved changes to privacy settings
+
+Parental controls can be applied to privacy and interaction settings. For example, family members of a more elder user can be authorized to restrict the user from sending cash/payments over the application.
 
 ### Feature 13: Locked messages
+
+
 
 ### Feature 14: Medication reminders inbuilt - gamification
 
 ### Feature 15: 
+
+### Feature 16:
+
+### Feature 17:
+
+### Feature 18:
+
+### Feature 19:
+
+### Feature 20:
 
 ## VSD Analysis
 
