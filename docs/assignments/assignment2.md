@@ -54,23 +54,36 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
 
 ## Feature Ideas Brainstorm
 
-Collaborators: I brainstormed with Emily Chen.
+Collaborators: I helped brainstormed with Emily Chen.
 
-### Feature 1: Big Text & Big Buttons
+### Feature 1: Adjustable Text Size
+A big issue for older users tends to be the ability to read easily the text on applications/websites. A solution to this could be an adjustable slider bar that allows a user to adjust the page to the text size that would be most convenient for them.
 
-### Feature 2: Simple & Intuitive UI
+### Feature 2: 
 
-### Feature 3: Verification for Users (Background check, ID)
+### Feature 3: Background Verification for Users 
+Users could have a verified feature tag that is only given once they do a background check, facial recognition check, or friend referal/validation.
 
-### Feature 4: Location based interest sharing
+### Feature 4: Location-based interest sharing friend recommendation
 
-### Feature 5: location base friendly
+Location tends to be a big limiting factor for more elderly users, especially as mobility declines, so there could be social/friend recommendations that are suggested based off common interests and proximity.
+
+### Feature 5: Postings board for social events
+
+A commmunity board for social events based off one's location and interests can be generated, where users can easily post upcoming events -- almost like job postings but for events.
 
 ### Feature 6: Voice command integration
 
-### Feature 7: Video & Audio Calls
+Texting/typing can be difficult for older users, so voice commands can be integrated to do basic functionality on the app. 
+
+### Feature 7: Video & Audio Calls - Location Based
+
+
+
 
 ### Feature 8: Chatbots to summarize information on privacy
+
+
 
 ### Feature 9: Leaderboard on how champion privacy or streaks if they keep updated 
 
