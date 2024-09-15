@@ -1,9 +1,9 @@
 ---
-title: "Assignment 2"
+title: "Assignment 2: Divergent Design"
 layout: doc
 ---
 
-# Assignment 2: Divergent Design & Design Document
+# Assignment 2: Divergent Design
 
 
 ## Broad Application Goals
@@ -50,7 +50,7 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/bereal_photoroulette.png" alt="Bereal photoroulette" width="100%">
+    <img src="/assets/images/A2/bereal_photoroulette.jpeg" alt="Bereal photoroulette" width="100%">
     <p>Photoroulette on BeReal where a randomly chosen photo is posted: can we apply this idea to perhaps implementing a feature where randomly chosen friends are chosen to catch up with or a random photo shows up on a timeline for nostalgia? </p>
   </div>
 
@@ -107,15 +107,19 @@ Users can only add and find friends through a specially generated code/password/
 
 Parental controls can be applied to privacy and interaction settings. For example, family members of a more elder user can be authorized to restrict the user from sending cash/payments over the application.
 
-### Feature 13: Locked messages
+### Feature 13: Hidden/restricted messages from potentially suspicious users
 
+If a user gets a message or request from another user who is not verified or is found to be suspicious, their messaging ability may be restricted until manually verified.
 
+### Feature 14: Streak tracking of medication reminders
 
-### Feature 14: Medication reminders inbuilt - gamification
+Medication reminders can be gamified with streak tracking of when users took medications. For example, elderly users may be susceptible to forgetting to take critical medications, so public streaks can help encourage them to remain consistent.
 
-### Feature 15: 
+### Feature 15: Locked chats
 
-### Feature 16:
+If a chat is predicted to be potentially involving suspicious behavior or a user is predicted to be a bot, a chat between two users can automatically lock.
+
+### Feature 16: 
 
 ### Feature 17:
 
