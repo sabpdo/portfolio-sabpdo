@@ -74,13 +74,17 @@ Collaborators: I brainstormed with Emily Chen.
 
 ### Feature 9: Leaderboard on how champion privacy or streaks if they keep updated 
 
-### Feature 10: Memory Lane/ Old Videos Nostalgia
+### Feature 10: Memory Lane/ Old Videos Nostalgia - random selection from camerea roll
 
-### Feature 11: Encryptd friend addition -- only through qr code, or a password
+### Feature 11: Encrypted friend addition -- only through qr code, or a password
 
-### Feature 12: Family approved changes to privacy settings
+### Feature 12: Family approved changes to privacy settings (e.g. can't send money or not)
 
 ### Feature 13: Locked messages
+
+### Feature 14: Medication reminders inbuilt - gamification
+
+### Feature 15: 
 
 ## VSD Analysis
 
