@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Sabrina Do"
   text: "6.1040 Fall 2024"
-  tagline: "Portfolio"
+  tagline: "Sabrina's Stellar Portfolio"
   actions:
     - theme: brand
       text: Template Repository
@@ -16,12 +16,12 @@ hero:
 
 features:
   - title: Blogs
-    details: Some cool blogs you'll write this semester!
+    details: Some cool blogs I wrote this semester!
     link: /blogs
   - title: Assignments
-    details: All of your assignments will be posted on your portfolio.
+    details: All of my assignments.
     link: /assignments
   - title: About Me
-    details: You'll implement a small bio about yourself on here!
+    details: Read to find out a bit more about me!
     link: /about
 ---

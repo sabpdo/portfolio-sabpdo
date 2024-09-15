@@ -119,16 +119,68 @@ Medication reminders can be gamified with streak tracking of when users took med
 
 If a chat is predicted to be potentially involving suspicious behavior or a user is predicted to be a bot, a chat between two users can automatically lock.
 
-### Feature 16: 
+### Feature 16: Social Wellness Reminders
 
-### Feature 17:
+If a user has not interacted with other friends or family for a while, notifications can be sent to check in on the user and check if the user has a sufficient level of social interaction, targeting senior isolation.
 
-### Feature 18:
+### Feature 17: Trusted caregiver viewer
 
-### Feature 19:
+If the user has a trusted caregiver, the caregiver could potentially have full view to the user's account to ensure that the user does not fall prey to phishing attempts or scams.
 
-### Feature 20:
+### Feature 18: Restricted privacy modes
+
+For a user's account, they can post with multiple privacy modes depending on the content -- primarily friends, family only, friends and family, or public. This allows users to share only content with the people they feel comfortable sharing with. 
+
+### Feature 19: Automatic family health information sharing
+
+Users can identify which other users are in their family, and basic health information (e.g. pedometer, medication tracking) will be shared with their family. This allows family to easily check in and see if their other family members are doing ok.
+
+### Feature 20: Low vision mode
+
+The app can have mode that switches between a more complex and another that has a more simple user interface that is more minimalistic and has less visual clutter. This gives the options for elders with lower vision to customize their application experience. 
+
+### Feature 21: Social challenges
+
+Non-intrusive generated social challenges (e.g. "reach out to a family member" or "share a post that shows you doing an old hobby you enjoyed") can encourage connection and community between elder users. 
+
+### Feature 22: Simplified event booking
+
+Users can define easily when they are busy and not busy, and other users can easily book/suggest times to spend time together on the other person's calendar.
+
+### Feature 23: Prioritized family and friends feed ranking & messaging
+
+Users can define whose posts they want to see, allowing them to select their feed/messaging order to be prioritized by the identity of the user (e.g. family/friend). For example, if they want to mainly see posts by their family, they can restrict their feed to only see those posts.
 
 ## VSD Analysis
+
+### Insight 1: Stakeholders - Non-targeted Use
+
+Giving control to trusted caregivers to control settings and gain access to data (Feature #17, Feature #12) can raise ethical concerns about surveillance and overreach, especially if caregivers can intrude on privacy conversations that are not meant to be monitoring. Furthermore, this may lead to the reduction of the elderly user’s autonomy at the benefit of security.
+
+To address this, use role-based access (e.g., read-only for caregivers, control over privacy settings for elderly users) and provide clear notifications when changes are made for transparency.
+
+### Insight 2: Pervasiveness - Different Geographies
+
+Varying geographies may include rural areas with limited access, urban areas with lots of noise and distractions, and suburban areas with established communities already. Social & location-based features may be harder to navigate in more rural areas (Feature #4).
+
+The application can better support multiple environments by also including an option to randomly generated communities with users from varying environments to diversify the communities and allow more cross-cultural communication.
+
+### Insight 3: Value - Value Tensions
+
+When designing the app, key value tensions include: Privacy vs. Autonomy (Feature #12), Security vs. Convenience (Features #11, #3), and Utility vs. Simplicity (balancing functionality with a user-friendly interface).
+
+To address the usability vs. utility tension, the app can prioritize a clean, simple interface with essential features. For example, while notifications (Features #9, #16) can be helpful, too many may overwhelm elderly users. Limiting notifications to the most critical ones can improve the user experience.
+
+### Insight 4: Time - Sustained Friendships
+
+Five years out from now, features such as Feature #2, Feature #22 encourages friends and family to stay in touch through periodic reminders. On one hand, it can foster stronger relationships and connections, but it can also make relationships more habitual and less spontaneous. 
+
+Adaptive reminder settings can be implemented where users can adjust the frequency and type of reminders based on their preferences and current social activity levels. Instead of jst reminders, options for positive reinforement (e.g. celebrating milestones) cna be utilized instead.
+
+### Insight 5: Stakeholders - Variation in Human Ability
+
+The application aims to adjust for varying levels of physical abilities, such as for limited motor ability (Feature #6) or low vision (Feature #20), however breakdowns still occur for some users such as color blind users or limited hearing users.
+
+Not only can voice commands be implemented for those who struggle with typing, but also adaptable settings for read-aloud text can be implemented for text on the pages as well as the incorporation of a color-blind palette.
 
 ## Storyboarding and sketching
