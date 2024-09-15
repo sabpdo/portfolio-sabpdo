@@ -17,54 +17,44 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
 
 ## Scrapbook of comparables
 
-### Duolingo
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
 
-![picture description](/assets/images/A2/duolingo_gamification.jpg)
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/duolingo_gamification.jpg" alt="Duolingo gamification" width="100%">
+    <p>At the core concept of Duolingo lays its gamification of language learning. Could we integrate periodic reminders and streak tracking to keep track of good privacy habits?</p>
+  </div>
 
-At the core concept of Duolingo lays its gamification of language learning. Could we integrate periodic reminders and streak tracking to keep track of good privacy habits?
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/lyft_rider_verification.png" alt="Lyft rider verification" width="100%">
+    <p>Verification for Lyft/Uber drivers based on government identification and background checks: could we apply this idea to add credibility to the actual identity of users of the app?</p>
+  </div>
 
-### Lyft
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/life_360_family.png" alt="Life360 family tracking" width="100%">
+    <p>Family tracking and notifications on Life360 (Location & Battery): could we apply this idea to parental/family controls by sending automated alerts over changes in privacy & app settings to maintain safety?</p>
+  </div>
 
-![picture description](/assets/images/A2/lyft_rider_verification.jpg)
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/reddit_anonymous_names.png" alt="Reddit anonymous names" width="100%">
+    <p>Randomly generated names on Reddit: could we apply this idea to adding friends on a social media app? When messaging a new user, one would outsource the user by a uniquely generated encrypted username.</p>
+  </div>
 
-Verification for Lyft/Uber drivers based off government identification and background checks: could we apply this idea to add credibility to the actual identity of users of the app?
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/beli_ranking.jpg" alt="Beli ranking" width="100%">
+    <p>Ranking of restaurants on Beli: could we have a ranking of the top champions of privacy/posts/connections?</p>
+  </div>
 
-### Life 360
+  <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
+    <img src="/assets/images/A2/w2m_timezone.png" alt="When2Meet timezones" width="100%">
+    <p>Timezones on When2Meet: Having options for people and users from different regions is critical. Can we apply this idea to having multiple language and text size options on a website depending on the user's preferences?</p>
+  </div>
 
-![picture description](/assets/images/A2/life_360_family.png)
-
-Family tracking and notifications on Life360 (Location & Battery): could we apply this idea to parental/family controls by sending automated alerts over changes privacy & app settings to maintain safety?
-
-
-### Reddit 
-
-![picture description](/assets/images/A2/reddit_anonymous_names.png)
-
-Randomly generated names on reddit: could we apply this idea to adding friends on a social media app? In particular, when messaging a new user, one would have to outsource the user by a uniquely generated encrypted username.
-
-### Beli
-
-![picture description](/assets/images/A2/beli_ranking.jpg)
-
-Ranking of restaurants on Beli: could we have a ranking of the top champions of privacy/posts/connections?
-
-
-### Venmo
-
-![picture description](/assets/images/A2/venmo_feed.png)
-
-Activity feed on Venmo
+</div>
 
 
-### When2meet
+## Feature Ideas Brainstorm
 
-![picture description](/assets/images/A2/w2m_timezone.png)
-
-Activity feed: 
-
-## Feature Ideas Brainstrom
-
-
+Collaborators: I brainstormed with Emily Chen.
 
 ### Feature 1: Big Text & Big Buttons
 
@@ -86,7 +76,11 @@ Activity feed:
 
 ### Feature 10: Memory Lane/ Old Videos Nostalgia
 
-### Feature 11: 
+### Feature 11: Encryptd friend addition -- only through qr code, or a password
+
+### Feature 12: Family approved changes to privacy settings
+
+### Feature 13: Locked messages
 
 ## VSD Analysis
 
