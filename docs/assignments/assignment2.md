@@ -59,25 +59,26 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
 
 ## Feature Ideas Brainstorm
 
-Collaborators: I helped brainstormed with Emily Chen.
+Collaborators: I brainstormed with Emily Chen.
 
 ### Feature 1: Adjustable Text Size
-A big issue for older users tends to be the ability to read easily the text on applications/websites. A solution to this could be an adjustable slider bar that allows a user to adjust the page to the text size that would be most convenient for them.
+A big issue for older users tends to be the ability to read the text on applications/websites easily. A solution to this could be an adjustable slider bar that allows a user to adjust the page to the text size that would be most convenient for them.
 
 ### Feature 2: Automatically scheduled friend/family check-in
 
-Sometimes keeping consistent contact with loved ones can be hard, especially for seniors trying to connect with the younger generation, so the app could automatically schedule periodic check-ins/get togethers on two parties' calendars.
+Sometimes keeping consistent contact with loved ones can be hard, especially for seniors trying to connect with the younger generation. The app could automatically schedule periodic check-ins/get-togethers on two parties' calendars.
 
 ### Feature 3: Background Verification for Users 
-Users could have a verified feature tag that is only given once they do a background check, facial recognition check, or friend referal/validation.
+
+Users could have a verified feature tag. This tag would be given once they do a background check, facial recognition check, or friend referral/validation.
 
 ### Feature 4: Location-based interest sharing friend recommendation
 
-Location tends to be a big limiting factor for more elderly users, especially as mobility declines, so there could be social/friend recommendations that are suggested based off common interests and proximity.
+Location tends to be a big limiting factor for more elderly users, especially as mobility declines, so there could be social/friend recommendations that are suggested based on common interests and proximity.
 
 ### Feature 5: Postings board for social events
 
-A commmunity board for social events based off one's location and interests can be generated, where users can easily post upcoming events -- almost like job postings but for events.
+A community board for social events based on one's location and interests can be generated, where users can easily post upcoming events -- almost like job postings but for events.
 
 ### Feature 6: Voice command integration
 
@@ -85,27 +86,27 @@ Texting/typing can be difficult for older users, so voice commands can be integr
 
 ### Feature 7: Chatbot trained over privacy settings
 
-Navigating the privacy settings can be confusing, but a chatbot that can easily help answer users' questions and guide them through the process of setting it up can facilitate the process.
+Navigating the privacy settings can be confusing, but a chatbot can easily help answer users' questions and guide them through the process of setting them up.
 
-### Feature 8: AI Powered Summary of Privacy & Consent Information
+### Feature 8: AI-Powered Summary of Privacy & Consent Information
 
-Reading through consent forms and privacy policies can be lengthy, but having an AI powered summary can reduce the legal jargon and make it more readable for elderly users.
+Reading through consent forms and privacy policies can be lengthy, but having an AI-powered summary can reduce the legal jargon and make it more readable for elderly users.
 
 ### Feature 9: Privacy Habit Notifications
 
-Sometimes remembering to check one's privacy settings as policies change is hard to remember, and thus an automated notification system to reminder users to do so can help recall. 
+Sometimes remembering to check one's privacy settings as policies change is hard to remember, and thus an automated notification system to remind users can help recall. 
 
 ### Feature 10: Memory Lane/ Old Videos Nostalgia - Random Selection from Camera Roll
 
-Once a month, a random photo and/or video will be selected from a person's camera roll and be posted on their personal activity feedback to allow nostalgic reflection.
+Once a month, a random photo and/or video will be selected from a person's camera roll and posted on their personal activity feedback to allow nostalgic reflection.
 
 ### Feature 11: Encrypted Friend Addition
 
 Users can only add and find friends through a specially generated code/password/QR code. This prevents elder users from getting friend requests from random users who may be phishers.
 
-### Feature 12: Family approved changes to privacy settings
+### Feature 12: Family-approved changes to privacy settings
 
-Parental controls can be applied to privacy and interaction settings. For example, family members of a more elder user can be authorized to restrict the user from sending cash/payments over the application.
+Parental controls can be applied to privacy and interaction settings. For example, family members of an older user can be authorized to restrict the user from sending cash/payments over the application.
 
 ### Feature 13: Hidden/restricted messages from potentially suspicious users
 
@@ -115,9 +116,9 @@ If a user gets a message or request from another user who is not verified or is 
 
 Medication reminders can be gamified with streak tracking of when users took medications. For example, elderly users may be susceptible to forgetting to take critical medications, so public streaks can help encourage them to remain consistent.
 
-### Feature 15: Locked chats
+### Feature 15: Locked user chats
 
-If a chat is predicted to be potentially involving suspicious behavior or a user is predicted to be a bot, a chat between two users can automatically lock.
+If a chat is predicted to potentially involve suspicious behavior or a user is predicted to be a bot, a chat between two users can automatically lock.
 
 ### Feature 16: Social Wellness Reminders
 
@@ -125,7 +126,7 @@ If a user has not interacted with other friends or family for a while, notificat
 
 ### Feature 17: Trusted caregiver viewer
 
-If the user has a trusted caregiver, the caregiver could potentially have full view to the user's account to ensure that the user does not fall prey to phishing attempts or scams.
+If the user has a trusted caregiver, the caregiver could potentially have a full view of the user's account to ensure that the user does not fall prey to phishing attempts or scams.
 
 ### Feature 18: Restricted privacy modes
 
@@ -137,7 +138,7 @@ Users can identify which other users are in their family, and basic health infor
 
 ### Feature 20: Low vision mode
 
-The app can have mode that switches between a more complex and another that has a more simple user interface that is more minimalistic and has less visual clutter. This gives the options for elders with lower vision to customize their application experience. 
+The app can have a mode that switches between a more complex and another that has a more simple user interface that is more minimalistic and has less visual clutter. This gives the opportunity for elders with lower vision to customize their application experience. 
 
 ### Feature 21: Social challenges
 
@@ -155,7 +156,7 @@ Users can define whose posts they want to see, allowing them to select their fee
 
 ### Insight 1: Stakeholders - Non-targeted Use
 
-Giving control to trusted caregivers to control settings and gain access to data (Feature #17, Feature #12) can raise ethical concerns about surveillance and overreach, especially if caregivers can intrude on privacy conversations that are not meant to be monitoring. Furthermore, this may lead to the reduction of the elderly user’s autonomy at the benefit of security.
+Giving control to trusted caregivers to control settings and gain access to data (Feature #17, Feature #12) can raise ethical concerns about surveillance and overreach, especially if caregivers can intrude on private conversations that are not meant to be monitored. Furthermore, this may lead to the reduction of the elderly user’s autonomy at the benefit of security.
 
 To address this, use role-based access (e.g., read-only for caregivers, control over privacy settings for elderly users) and provide clear notifications when changes are made for transparency.
 
@@ -163,7 +164,7 @@ To address this, use role-based access (e.g., read-only for caregivers, control 
 
 Varying geographies may include rural areas with limited access, urban areas with lots of noise and distractions, and suburban areas with established communities already. Social & location-based features may be harder to navigate in more rural areas (Feature #4).
 
-The application can better support multiple environments by also including an option to randomly generated communities with users from varying environments to diversify the communities and allow more cross-cultural communication.
+The application can better support multiple environments by also including an option to randomly generate communities with users from varying environments to diversify the communities and allow more cross-cultural communication.
 
 ### Insight 3: Value - Value Tensions
 
@@ -173,14 +174,19 @@ To address the usability vs. utility tension, the app can prioritize a clean, si
 
 ### Insight 4: Time - Sustained Friendships
 
-Five years out from now, features such as Feature #2, Feature #22 encourages friends and family to stay in touch through periodic reminders. On one hand, it can foster stronger relationships and connections, but it can also make relationships more habitual and less spontaneous. 
+Five years out from now, features such as Feature #2 and Feature #22, encourage friends and family to stay in touch through periodic reminders. On one hand, it can foster stronger relationships and connections, but it can also make relationships more habitual and less spontaneous. 
 
-Adaptive reminder settings can be implemented where users can adjust the frequency and type of reminders based on their preferences and current social activity levels. Instead of jst reminders, options for positive reinforement (e.g. celebrating milestones) cna be utilized instead.
+Adaptive reminder settings can be implemented where users can adjust the frequency and type of reminders based on their preferences and current social activity levels. Instead of just reminders, options for positive reinforcement (e.g. celebrating milestones) can be utilized instead.
 
 ### Insight 5: Stakeholders - Variation in Human Ability
 
-The application aims to adjust for varying levels of physical abilities, such as for limited motor ability (Feature #6) or low vision (Feature #20), however breakdowns still occur for some users such as color blind users or limited hearing users.
+The application aims to adjust for varying levels of physical abilities, such as for limited motor ability (Feature #6) or low vision (Feature #20); however, breakdowns still occur for some users such as color-blind users or limited hearing users.
 
 Not only can voice commands be implemented for those who struggle with typing, but also adaptable settings for read-aloud text can be implemented for text on the pages as well as the incorporation of a color-blind palette.
 
 ## Storyboarding and sketching
+
+
+### Storyboard 1: AI-Powered Privacy Policy Summary and Privacy Setting Navigation
+
+![Chatbot for Privacy Setting Navigation and Privacy Policy Summary](/assets/images/A2/storyboard1.png)

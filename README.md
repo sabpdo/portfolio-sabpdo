@@ -16,7 +16,7 @@ You will have to install [Node.js](https://nodejs.org/en/) **v18** to use this t
 ## Setup Guide
 
 1. Log in to or create your GitHub account. Create your repo using this Vitepress Template repo as a template. ![Use as template example](assets/images/use-this-template.PNG)
-2. Be sure to name your repo `portfolio-<some-variation-of-your-preferred-name>`. For example, if my name is Dana Hua, I could name the repo `portfolio-dana` or `portfolio-dhua`. ![Create new repo](assets/images/create-new-repo.PNG)
+2. Be sure to name your repo `portfolio-sabpdo`. For example, if my name is Dana Hua, I could name the repo `portfolio-dana` or `portfolio-dhua`. ![Create new repo](assets/images/create-new-repo.PNG)
 2. Clone your new repo to your local machine.
 3. `cd` into your own repo, and then run `npm install` to install the dependencies. _Make sure you've correctly installed Node v18 before doing this step._
 4. Run `npm run docs:dev` to start the development server. You should see a message with the `localhost` path where it is deployed; check it to make sure you can see your site.
