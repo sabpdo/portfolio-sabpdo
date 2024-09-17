@@ -189,12 +189,18 @@ Not only can voice commands be implemented for those who struggle with typing, b
 
 ### Storyboard 1: AI-Powered Privacy Policy Summary and Privacy Setting Navigation
 
+(Goal: Easily summarize and learn about privacy policies through a chatbot due to the typical lengthiness and timeliness it takes)
+
 ![Chatbot for Privacy Setting Navigation and Privacy Policy Summary](/assets/images/A2/storyboard1.png)
 
 ### Storyboard 2: Family Approved Changes to Privacy Setting
 
+(Goal: Prevent elder users from doing certain actions that would put them in suspicious situations, such as sending money over chat)
+
 ![Family Approved Changes to Privacy Setting](/assets/images/A2/storyboard2.png)
 
 ### Storyboard 3: Messaging with New/Suspicious Users
+
+(Goal: Provide more apparent warning signs to users when they receive a suspicious message from a suspcious user)
 
 ![Messaging with New/Suspicious Users](/assets/images/A2/storyboard3.png)
