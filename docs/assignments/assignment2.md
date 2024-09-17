@@ -12,7 +12,7 @@ __Name__: GoldenBook
 
 __Intended Audience__: The intended audience will be elderly/older individuals. 
 
-__Value__: GoldenBook will be the next app designed for elderly individuals -- it will focus on building community and connection for elderly individuals while also having features to help mitigate privacy and security risks that current social media apps lack. 
+__Value__: GoldenBook will be the next app designed for elderly individuals -- it will focus on building community and connection for elderly individuals who are more prone to social isolation. It will also have features to help mitigate privacy and security risks that current social media apps lack and that elderly citizens are more susceptible to.
 
 
 ## Scrapbook of comparables
@@ -146,11 +146,11 @@ Non-intrusive generated social challenges (e.g. "reach out to a family member" o
 
 ### Feature 22: Simplified event booking
 
-Users can define easily when they are busy and not busy, and other users can easily book/suggest times to spend time together on the other person's calendar.
+Users can define easily when they are busy and not busy, and other users can easily book/suggest times to spend time together on the other person's calendar; this fosters easy community building and connection.
 
 ### Feature 23: Prioritized family and friends feed ranking & messaging
 
-Users can define whose posts they want to see, allowing them to select their feed/messaging order to be prioritized by the identity of the user (e.g. family/friend). For example, if they want to mainly see posts by their family, they can restrict their feed to only see those posts.
+Users can define whose posts they want to see, allowing them to select their feed/messaging order to be prioritized by the identity of the user (e.g. family/friend). For example, if they want to mainly see posts by their family, they can restrict their feed to only see those posts. This allows for a more specified selection of posts for users and reduces chances of elder users on clicking on potentially unknown/risky users.
 
 ## VSD Analysis
 
@@ -184,9 +184,17 @@ The application aims to adjust for varying levels of physical abilities, such as
 
 Not only can voice commands be implemented for those who struggle with typing, but also adaptable settings for read-aloud text can be implemented for text on the pages as well as the incorporation of a color-blind palette.
 
-## Storyboarding and sketching
+## Storyboarding and Sketching
 
 
 ### Storyboard 1: AI-Powered Privacy Policy Summary and Privacy Setting Navigation
 
 ![Chatbot for Privacy Setting Navigation and Privacy Policy Summary](/assets/images/A2/storyboard1.png)
+
+### Storyboard 2: Family Approved Changes to Privacy Setting
+
+![Family Approved Changes to Privacy Setting](/assets/images/A2/storyboard2.png)
+
+### Storyboard 3: Messaging with New/Suspicious Users
+
+![Messaging with New/Suspicious Users](/assets/images/A2/storyboard3.png)
