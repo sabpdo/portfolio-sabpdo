@@ -181,22 +181,41 @@ __Actions__:
 
 
 ### Synchronization #1:
-__concept__:
-__purpose__:
-__principle__:
-__state__:
-__actions__:
+__Concept__:
+
+__Purpose__:
+
+__Principle__:
+
+__State__:
+
+__Actions__:
 
 ### Synchronization #2:
-__concept__:
-__purpose__:
-__principle__:
-__state__:
-__actions__:
+__Concept__:
+
+__Purpose__:
+
+__Principle__:
+
+__State__:
+
+__Actions__:
 
 
-SubSets:
-{}
+__SubSets__:
+\{Authenticating\}
+
+\{Messaging, Authenticating\}
+
+\{Posting, Authenticating\}
+
+\{Nudging, Authenticating\}
+
+\{Authorizing, Tracking, Messaging, Nudging, Posting, Authenticating\}
+
+\{Tracking, Messaging, Posting, Authenticating\}
+
 
 
 
