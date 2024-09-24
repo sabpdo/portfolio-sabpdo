@@ -20,37 +20,37 @@ __Value__: GoldenBook will be the next app designed for elderly individuals -- i
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/duolingo_gamification.jpg" alt="Duolingo gamification" width="100%">
+    <img src="/assets/images/Assignments/A2/duolingo_gamification.jpg" alt="Duolingo gamification" width="100%">
     <p>At the core concept of Duolingo lays its gamification of language learning. Could we integrate periodic reminders and streak tracking to keep track of good privacy habits?</p>
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/lyft_rider_verification.png" alt="Lyft rider verification" width="100%">
+    <img src="/assets/images/Assignments/A2/lyft_rider_verification.png" alt="Lyft rider verification" width="100%">
     <p>Verification for Lyft/Uber drivers based on government identification and background checks: could we apply this idea to add credibility to the actual identity of users of the app?</p>
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/life_360_family.png" alt="Life360 family tracking" width="100%">
+    <img src="/assets/images/Assignments/A2/life_360_family.png" alt="Life360 family tracking" width="100%">
     <p>Family tracking and notifications on Life360 (Location & Battery): could we apply this idea to parental/family controls by sending automated alerts over changes in privacy & app settings to maintain safety?</p>
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/reddit_anonymous_names.png" alt="Reddit anonymous names" width="100%">
+    <img src="/assets/images/Assignments/A2/reddit_anonymous_names.png" alt="Reddit anonymous names" width="100%">
     <p>Randomly generated names on Reddit: could we apply this idea to adding friends on a social media app? When messaging a new user, one would outsource the user by a uniquely generated encrypted username.</p>
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/beli_ranking.jpg" alt="Beli ranking" width="100%">
+    <img src="/assets/images/Assignments/A2/beli_ranking.jpg" alt="Beli ranking" width="100%">
     <p>Ranking of restaurants on Beli: could we have a ranking of the top champions of privacy/posts/connections?</p>
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/w2m_timezone.png" alt="When2Meet timezones" width="100%">
+    <img src="/assets/images/Assignments/A2/w2m_timezone.png" alt="When2Meet timezones" width="100%">
     <p>Timezones on When2Meet: Having options for people and users from different regions is critical. Can we apply this idea to having multiple language and text size options on a website depending on the user's preferences?</p>
   </div>
 
   <div style="flex-basis: 45%; border: 1px solid #ccc; padding: 10px;">
-    <img src="/assets/images/A2/bereal_photoroulette.jpeg" alt="Bereal photoroulette" width="100%">
+    <img src="/assets/images/Assignments/A2/bereal_photoroulette.jpeg" alt="Bereal photoroulette" width="100%">
     <p>Photoroulette on BeReal where a randomly chosen photo is posted: can we apply this idea to perhaps implementing a feature where randomly chosen friends are chosen to catch up with or a random photo shows up on a timeline for nostalgia? </p>
   </div>
 
@@ -191,16 +191,16 @@ Not only can voice commands be implemented for those who struggle with typing, b
 
 (Goal: Easily summarize and learn about privacy policies through a chatbot due to the typical lengthiness and timeliness it takes)
 
-![Chatbot for Privacy Setting Navigation and Privacy Policy Summary](/assets/images/A2/storyboard1.png)
+![Chatbot for Privacy Setting Navigation and Privacy Policy Summary](/assets/images/Assignments/A2/storyboard1.png)
 
 ### Storyboard 2: Family Approved Changes to Privacy Setting
 
 (Goal: Prevent elder users from doing certain actions that would put them in suspicious situations, such as sending money over chat)
 
-![Family Approved Changes to Privacy Setting](/assets/images/A2/storyboard2.png)
+![Family Approved Changes to Privacy Setting](/assets/images/Assignments/A2/storyboard2.png)
 
 ### Storyboard 3: Messaging with New/Suspicious Users
 
 (Goal: Provide more apparent warning signs to users when they receive a suspicious message from a suspcious user)
 
-![Messaging with New/Suspicious Users](/assets/images/A2/storyboard3.png)
+![Messaging with New/Suspicious Users](/assets/images/Assignments/A2/storyboard3.png)

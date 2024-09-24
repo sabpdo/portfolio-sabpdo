@@ -25,6 +25,7 @@ GoldenBook is crafted with input from elderly users to ensure accessibility and 
 ## Functional Design
 
 ### Concept 1:
+
 __Name__: Authorizing (Item)
 
 __Purpose__: provide access to perform specified action
@@ -51,6 +52,7 @@ __Actions__:
         u in allowed - action
 
 ### Concept 2: 
+
 __Name__: Authenticating
 
 __Purpose__: authentaticate users so that app users correspond to people
@@ -144,7 +146,7 @@ __Actions__:
     delete(a: User, p: Post)
         user_posts[a] -= oldPost
 
-### Concept 7: 
+### Concept 6: 
 
 __Name__: Tracking
 
@@ -175,11 +177,32 @@ __Actions__:
         tracked_users -= u
 
 
-### Synchronizations of Concept Actions 
+## Synchronizations of Concept Actions 
+
+
+### Synchronization #1:
+__concept__:
+__purpose__:
+__principle__:
+__state__:
+__actions__:
+
+### Synchronization #2:
+__concept__:
+__purpose__:
+__principle__:
+__state__:
+__actions__:
+
+
+SubSets:
+{}
 
 
 
-### Dependency Diagram
+## Dependency Diagram
+
+![Dependency Diagram](/assets/images/Assignments/DependencyDiagram.png)
 
 ## Wireframes
 
