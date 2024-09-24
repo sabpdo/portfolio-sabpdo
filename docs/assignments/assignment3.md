@@ -21,53 +21,54 @@ GoldenBook is designed to be accessible and is made for elderly people, with inp
 ## Functional Design
 
 ### Concept 1:
-__Name__: Authorizing
+__Name__: Logging
 __Purpose__:
 __Operational Principle__:
 __State__:
 __Actions__:
 
 ### Concept 2: 
-__Name__: (Streak) Tracking
+__Name__: Tracking
 __Purpose__:
 __Operational Principle__:
 __State__:
 __Actions__:
+
 
 ### Concept 3:
-__Name__: Viewing (Your Profile & Your Feed)
+__Name__: Nudging
 __Purpose__:
 __Operational Principle__:
-__State__:
-__Actions__:
+__State__: friends?
+__Actions__: send nudge
 
 ### Concept 4:
-__Name__: Notifying
+__Name__: Navigating 
 __Purpose__:
 __Operational Principle__:
 __State__:
 __Actions__:
 
 ### Concept 5:
-__Name__: Navigating (Privacy Settings)
-__Purpose__:
-__Operational Principle__:
-__State__:
-__Actions__:
-
-### Concept 6:
 __Name__: Messaging
 __Purpose__:
 __Operational Principle__:
 __State__:
 __Actions__:
 
-### Concept 7:
+### Concept 6:
 __Name__: Posting
 __Purpose__:
 __Operational Principle__:
 __State__:
 __Actions__:
+
+### Concept 7:
+__Name__: Authorizing
+__Purpose__:
+__Operational Principle__:
+__State__: allowed states
+__Actions__: denied states (allow, deny)
 
 ### Synchronizations of Concept Actions & Dependency Diagram
 
