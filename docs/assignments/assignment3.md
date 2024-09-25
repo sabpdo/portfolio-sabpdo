@@ -140,6 +140,9 @@ __Actions__:
     
     deleteAll(a: User)
         messages -= message[a, b, c] for any b, c
+    
+    getMessages(a: User)
+        message for message in messages if message[0] == a
 
 ### Concept 5:
 
@@ -167,6 +170,9 @@ __Actions__:
     
     delete(a: User, p: Post)
         posts[a] -= oldPost
+    
+    getPosts(a: User)
+        post in posts[a]
 
 ### Concept 6: 
 
@@ -200,6 +206,9 @@ __Actions__:
     
     get_tracked_activities(u: User, __out__: actions)
         actions in user_actions[u]
+    
+    get_tracked_user_activity(u: User, action: String, __out__: actions)
+        action for actions in user_actions[u] if action[0] == action
 
 
 
@@ -325,14 +334,31 @@ __sync__ trackPostingActivity(user: User)
 ```
 ```
 __sync__ nudgeForPost(user: User)
+
     Authorizing.isLoggedIn(user)
     Authorizing.isAllowed(user, "nudge")
     Nudging.notify(system, user, "post")
 ```
 ```
 __sync__ unregister(user: User)
+
     Authorizing.isLoggedIn(user)
     Tracking.stop_tracking(user, activity) for activity in Tracking.get_tracked_activities(user)
+```
+```
+__sync__ nudgeForInactivePoster(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Tracking.get_tracked_user_activity(user, "post")
+    Nudging.notify(system, user, "post")
+```
+```
+__sync__ autoPostFromTracking(user: User, post: Post)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "post")
+    Tracking.get_tracked_user_activity(user, "message")
+    Posting.post(user, post)
 ```
 
 
@@ -341,8 +367,6 @@ __sync__ unregister(user: User)
 ![Dependency Diagram](/assets/images/Assignments/DependencyDiagram.png)
 
 ## Wireframes
-
-## Design iteration
 
 ## Design tradeoffs
 
