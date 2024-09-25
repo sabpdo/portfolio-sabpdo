@@ -26,13 +26,13 @@ GoldenBook is crafted with input from elderly users to ensure accessibility and 
 
 ### Concept 1:
 
-__Name__: Authorizing (Item)
+__Name__: Authorizing \[Action]
 
 __Purpose__: provide access to perform specified action
 
 __Operational Principle__:
     after authorizing user u
-    to perform action a, a
+    to perform action a,
     user u can perform action a
     until access is revoked
 
@@ -50,10 +50,13 @@ __Actions__:
     deny(u:user, action: String)
         denied[u] += action
         u in allowed - action
+    
+    isAllowed(u: user, action: String)
+        action in allowed[u]
 
 ### Concept 2: 
 
-__Name__: Authenticating
+__Name__: Authenticating \[Item]
 
 __Purpose__: authentaticate users so that app users correspond to people
 
@@ -67,18 +70,34 @@ __State__:
 
     registered: __set__ User
     username, password: registered -> __one__ String
+    active_users: __set__ User
 
 __Actions__:
 
-    register(name, pass: String, verificationCode: String, __out__ user:User)
+    register(name, pass: String, verificationCode: String)
         registered += (name, pass)
+    
+    unregister(user: User)
+        registered -= (user.name, user.password)
+        active_users -= user
 
-    authenticate(name, pass:String, __out__ user:User)
+    login(name, pass:String)
         (name, pass) in registered
+        active_users += user
+
+    logout(user: User)
+        (name, pass) in registered
+        active_users -= user
+    
+    isLoggedIn(user:User, __out__ user: User)
+        user in active_users
+    
+    isRegistered(user: User, __out__ user: User)
+        user in registered
 
 
 ### Concept 3:
-__Name__: Nudging (Item)
+__Name__: Nudging \[Action]
 
 __Purpose__: deliver a notification
 
@@ -93,13 +112,13 @@ __State__:
 
 __Actions__: 
 
-    nudge(a: User, b: User, action: String)
+    notify(a: User, b: User, action: String)
         nudges[a, b] += action
 
 
 ### Concept 4:
 
-__Name__: Messaging (Item)
+__Name__: Messaging \[Item]
 
 __Purpose__: deliver a communication
 
@@ -118,10 +137,13 @@ __Actions__:
 
     unsend(a: User, b: User, c: String)
         messages -= message[a, b, c]
+    
+    deleteAll(a: User)
+        messages -= message[a, b, c] for any b, c
 
 ### Concept 5:
 
-__Name__: Posting (Item)
+__Name__: Posting \[Item]
 
 __Purpose__: share and save content
 
@@ -132,23 +154,23 @@ __Operational Principle__:
 
 __State__:
 
-    user_posts: (user) -> __set__ Posts
+    posts: (user) -> __set__ Posts
 
 __Actions__:
 
     post(a: User, p: Post)
-        user_posts[a] += p
+        posts[a] += p
 
     edit(a: User, oldPost: Post, newPost: Post)
-        user_posts[a] -= oldPost
-        user_posts[a] += newPost
+        posts[a] -= oldPost
+        posts[a] += newPost
     
     delete(a: User, p: Post)
-        user_posts[a] -= oldPost
+        posts[a] -= oldPost
 
 ### Concept 6: 
 
-__Name__: Tracking
+__Name__: Tracking \[Item]
 
 __Purpose__: monitor and track statistics
 
@@ -173,37 +195,18 @@ __Actions__:
         if u in tracked_users:
             user_actions[u] += (action, time)
 
-    stop_tracking(u: User, action: String, time: T)
+    stop_tracking(u: User, action: String)
         tracked_users -= u
+    
+    get_tracked_activities(u: User, __out__: actions)
+        actions in user_actions[u]
+
 
 
 ## Synchronizations of Concept Actions 
 
+### Subsets
 
-### Synchronization #1:
-__Concept__:
-
-__Purpose__:
-
-__Principle__:
-
-__State__:
-
-__Actions__:
-
-### Synchronization #2:
-__Concept__:
-
-__Purpose__:
-
-__Principle__:
-
-__State__:
-
-__Actions__:
-
-
-__SubSets__:
 \{Authenticating\}
 
 \{Messaging, Authenticating\}
@@ -216,7 +219,121 @@ __SubSets__:
 
 \{Tracking, Messaging, Posting, Authenticating\}
 
+### App Level & Synchronizations
 
+include Authenticating,  Messaging[Authenticating.User], Posting[Authenticating.User], 
+Nudging[Messaging.Message], Tracking[Messaging.Messages], Tracking[Posting.Posts], 
+Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting], 
+```
+__sync__ sendMessage(userA: User, userB: User, message: String)
+    
+    Authorizing.isLoggedIn(userA)
+    Authorizing.isAllowed(userA, "message")
+    Messaging.sendMessage(userA, userB, message)
+```
+```
+__sync__ unsendMessage(userA: User, userB: User, message: String)
+    
+    Authorizing.isLoggedIn(userA)
+    Authorizing.isAllowed(userA, "unsend")
+    Messaging.unsendMessage(userA, userB, message)
+```
+```
+__sync__ post(user: User, p: Post)
+    
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "post")
+    Post.post(user, p)
+    Nudging.notify()
+```
+```
+__sync__ edit(user: User, oldPost: Post, newPost: Post)
+    
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "post")
+    Post.edit(user, oldPost, newPost)
+```
+```
+__sync__ delete(user: User, p: Post)
+    
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "delete")
+    Post.delete(user, p)
+```
+```
+__sync__ nudgeForMessage(userA: User, userB: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "nudge")
+    Messaging.sendMessage()
+    Nudging.notify(userA, userB, "message")
+```
+```
+__sync__ allowMessage(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.allow(Messaging.sendMessage)
+    Authorizing.allow(Messaging.unsendMessage)
+```
+```
+__sync__ denyMessage(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.deny(Messaging.sendMessage)
+    Authorizing.deny(Messaging.unsendMessage)
+    Messaging.deleteAll(user)
+```
+```
+__sync__ allowTracking(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.allow(Tracking.start_tracking)
+    Authorizing.allow(Tracking.record)
+```
+```
+__sync__ denyTracking(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.deny(Tracking.start_tracking)
+    Authorizing.deny(Tracking.record)
+```
+```
+__sync__ allowPosting(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.allow(Posting.post)
+```
+```
+__sync__ denyPosting(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.deny(Posting.post)
+```
+```
+__sync__ trackMessageActivity(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "track")
+    Tracking.start_tracking(user, "message")
+```
+```
+__sync__ trackPostingActivity(user: User)
+
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "track")
+    Tracking.start_tracking(user, "post")
+```
+```
+__sync__ nudgeForPost(user: User)
+    Authorizing.isLoggedIn(user)
+    Authorizing.isAllowed(user, "nudge")
+    Nudging.notify(system, user, "post")
+```
+```
+__sync__ unregister(user: User)
+    Authorizing.isLoggedIn(user)
+    Tracking.stop_tracking(user, activity) for activity in Tracking.get_tracked_activities(user)
+```
 
 
 ## Dependency Diagram
