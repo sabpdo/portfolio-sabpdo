@@ -56,9 +56,9 @@ __Actions__:
 
 ### Concept 2: 
 
-__Name__: Authenticating \[Item]
+__Name__: Authenticating
 
-__Purpose__: authentaticate users so that app users correspond to people
+__Purpose__: authenticate users so that app users correspond to people
 
 __Operational Principle__: 
     
@@ -70,7 +70,6 @@ __State__:
 
     registered: __set__ User
     username, password: registered -> __one__ String
-    active_users: __set__ User
 
 __Actions__:
 
@@ -80,20 +79,10 @@ __Actions__:
     unregister(user: User)
         registered -= (user.name, user.password)
         active_users -= user
-
-    login(name, pass:String)
-        (name, pass) in registered
-        active_users += user
-
-    logout(user: User)
-        (name, pass) in registered
-        active_users -= user
     
-    isLoggedIn(user:User, __out__ user: User)
-        user in active_users
-    
-    isRegistered(user: User, __out__ user: User)
-        user in registered
+    authenticate(name, pass: String, __out__ user: User)
+        (name, pass) in registered
+
 
 
 ### Concept 3:
@@ -103,7 +92,7 @@ __Purpose__: deliver a notification
 
 __Operational Principle__: 
 
-    a user/the system a can nudge another user b
+    a user/the system userA can nudge another user userB
     to complete an action a
 
 __State__: 
@@ -112,34 +101,34 @@ __State__:
 
 __Actions__: 
 
-    notify(a: User, b: User, action: String)
-        nudges[a, b] += action
+    notify(userA: User, userB: User, action: String)
+        nudges[userA, userB] += action
 
 
 ### Concept 4:
 
-__Name__: Messaging \[Item]
+__Name__: Messaging \[User]
 
 __Purpose__: deliver a communication
 
 __Operational Principle__:
     user a can deliver a message
-    with content c to user b
+    with content `content` to user b
 
 __State__:
     message: (user, user) -> String s
     mesages: __set__ message
 
 __Actions__:
-    send(a: User, b: User, c: String)
-        message[a, b] = c
+    send(a: User, b: User, content: String)
+        message[a, b] = content
         messages += message
 
-    unsend(a: User, b: User, c: String)
+    unsend(a: User, b: User, content: String)
         messages -= message[a, b, c]
     
     deleteAll(a: User)
-        messages -= message[a, b, c] for any b, c
+        messages -= message[a, b, content] for any b, content
     
     getMessages(a: User)
         message for message in messages if message[0] == a
@@ -176,7 +165,7 @@ __Actions__:
 
 ### Concept 6: 
 
-__Name__: Tracking \[Item]
+__Name__: Tracking \[Action]
 
 __Purpose__: monitor and track statistics
 
@@ -210,6 +199,33 @@ __Actions__:
     get_tracked_user_activity(u: User, action: String, __out__: actions)
         action for actions in user_actions[u] if action[0] == action
 
+### Concept 7: 
+
+__Name__: Session-ing \[Action]
+
+__Purpose__: enable authenticated actions for an extended period of time
+
+__Operational Principle__:
+
+    after a session starts (and before it ends),
+    the getUser action returns the user identified at the start:
+    start(u,s); getUser(s, u') {u'=u}
+
+__State__:
+
+    active: __set__ Session
+    user: active -> one User
+
+__Actions__:
+
+    start(user: User, __out__ sess: Session)
+        active += user
+
+    getUser(sess: Session, __out__ user: User)
+        user in active
+    
+    end(sess: Session)
+        active -= user
 
 
 ## Synchronizations of Concept Actions 
@@ -218,21 +234,36 @@ __Actions__:
 
 \{Authenticating\}
 
-\{Messaging, Authenticating\}
+\{Messaging, Session-ing, Authenticating\}
 
-\{Posting, Authenticating\}
+\{Posting,  Session-ing, Authenticating\}
 
-\{Nudging, Authenticating\}
+\{Nudging, Messaging, Session-ing, Authenticating\}
 
-\{Authorizing, Tracking, Messaging, Nudging, Posting, Authenticating\}
+\{Authorizing, Tracking, Messaging, Session-ing,Authenticating\}
 
-\{Tracking, Messaging, Posting, Authenticating\}
+\{Authorizing, Tracking, Posting, Session-ing,Authenticating\}
+
+\{Tracking, Messaging, Session-ing, Authenticating\}
+
+\{Tracking, Posting, Session-ing Authenticating\}
 
 ### App Level & Synchronizations
 
-include Authenticating,  Messaging[Authenticating.User], Posting[Authenticating.User], 
+include Authenticating, Sessioning[Authenticating.User]  Messaging[Sessioning.User], Posting[Sessioning.User], 
 Nudging[Messaging.Message], Tracking[Messaging.Messages], Tracking[Posting.Posts], 
-Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting], 
+Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting]
+
+```
+__sync__ register(username, password: String, __out__ user: User)
+
+    Authenticating.register(username, password, user)
+```
+```
+__sync__ login(username, password: String, __out__ user: User, out session: Session)
+    Authenticating.authenticate(username, password, user)
+    Sessioning.start(user, session)
+```
 ```
 __sync__ sendMessage(userA: User, userB: User, message: String)
     
@@ -253,7 +284,6 @@ __sync__ post(user: User, p: Post)
     Authorizing.isLoggedIn(user)
     Authorizing.isAllowed(user, "post")
     Post.post(user, p)
-    Nudging.notify()
 ```
 ```
 __sync__ edit(user: User, oldPost: Post, newPost: Post)
@@ -333,34 +363,11 @@ __sync__ trackPostingActivity(user: User)
     Tracking.start_tracking(user, "post")
 ```
 ```
-__sync__ nudgeForPost(user: User)
-
-    Authorizing.isLoggedIn(user)
-    Authorizing.isAllowed(user, "nudge")
-    Nudging.notify(system, user, "post")
-```
-```
 __sync__ unregister(user: User)
 
     Authorizing.isLoggedIn(user)
     Tracking.stop_tracking(user, activity) for activity in Tracking.get_tracked_activities(user)
 ```
-```
-__sync__ nudgeForInactivePoster(user: User)
-
-    Authorizing.isLoggedIn(user)
-    Tracking.get_tracked_user_activity(user, "post")
-    Nudging.notify(system, user, "post")
-```
-```
-__sync__ autoPostFromTracking(user: User, post: Post)
-
-    Authorizing.isLoggedIn(user)
-    Authorizing.isAllowed(user, "post")
-    Tracking.get_tracked_user_activity(user, "message")
-    Posting.post(user, post)
-```
-
 
 ## Dependency Diagram
 
