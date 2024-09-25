@@ -371,7 +371,26 @@ __sync__ autoPostFromTracking(user: User, post: Post)
 ## Design tradeoffs
 
 ### Design Decision I
+__Title__:
+
+__Various Options__:
+
+__Rationale__:
+
 
 ### Design Decision II
 
+__Title__:
+
+__Various Options__:
+
+__Rationale__:
+
+
 ### Design Decision III
+
+__Title__:
+
+__Various Options__:
+
+__Rationale__:
