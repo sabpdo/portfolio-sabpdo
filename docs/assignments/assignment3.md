@@ -82,8 +82,7 @@ __Actions__:
     
     authenticate(name, pass: String, __out__ user: User)
         (name, pass) in registered
-
-
+    
 
 ### Concept 3:
 __Name__: Nudging \[Action]
@@ -104,7 +103,7 @@ __Actions__:
     notify(userA: User, userB: User, action: String)
         nudges[userA, userB] += action
 
-
+a
 ### Concept 4:
 
 __Name__: Messaging \[User]
@@ -222,6 +221,9 @@ __Actions__:
         active += user
 
     getUser(sess: Session, __out__ user: User)
+        user in active if Session.user == user
+    
+    userIsActive(sess: Session, user: User)
         user in active
     
     end(sess: Session)
@@ -250,7 +252,7 @@ __Actions__:
 
 ### App Level & Synchronizations
 
-include Authenticating, Sessioning[Authenticating.User]  Messaging[Sessioning.User], Posting[Sessioning.User], 
+include Authenticating, Session-ing[Authenticating.User]  Messaging[Session-ing.User], Posting[Session-ing.User], 
 Nudging[Messaging.Message], Tracking[Messaging.Messages], Tracking[Posting.Posts], 
 Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting]
 
@@ -261,112 +263,118 @@ __sync__ register(username, password: String, __out__ user: User)
 ```
 ```
 __sync__ login(username, password: String, __out__ user: User, out session: Session)
+
+    Authenticating.authenticate(username, password, user)
+    Sessioning.start(user, session)
+```
+```
+__sync__ authenticate(username, password: String, __out__ user: User, out session: Session)
+
     Authenticating.authenticate(username, password, user)
     Sessioning.start(user, session)
 ```
 ```
 __sync__ sendMessage(userA: User, userB: User, message: String)
     
-    Authorizing.isLoggedIn(userA)
+    Session-ing.userIsActive(userA)
     Authorizing.isAllowed(userA, "message")
     Messaging.sendMessage(userA, userB, message)
 ```
 ```
 __sync__ unsendMessage(userA: User, userB: User, message: String)
     
-    Authorizing.isLoggedIn(userA)
+    Session-ing.userIsActive(userA)
     Authorizing.isAllowed(userA, "unsend")
     Messaging.unsendMessage(userA, userB, message)
 ```
 ```
 __sync__ post(user: User, p: Post)
     
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "post")
     Post.post(user, p)
 ```
 ```
 __sync__ edit(user: User, oldPost: Post, newPost: Post)
     
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "post")
     Post.edit(user, oldPost, newPost)
 ```
 ```
 __sync__ delete(user: User, p: Post)
     
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "delete")
     Post.delete(user, p)
 ```
 ```
 __sync__ nudgeForMessage(userA: User, userB: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "nudge")
-    Messaging.sendMessage()
     Nudging.notify(userA, userB, "message")
 ```
 ```
 __sync__ allowMessage(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.allow(Messaging.sendMessage)
     Authorizing.allow(Messaging.unsendMessage)
 ```
 ```
 __sync__ denyMessage(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.deny(Messaging.sendMessage)
     Authorizing.deny(Messaging.unsendMessage)
-    Messaging.deleteAll(user)
 ```
 ```
 __sync__ allowTracking(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.allow(Tracking.start_tracking)
     Authorizing.allow(Tracking.record)
 ```
 ```
 __sync__ denyTracking(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.deny(Tracking.start_tracking)
     Authorizing.deny(Tracking.record)
 ```
 ```
 __sync__ allowPosting(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.allow(Posting.post)
 ```
 ```
 __sync__ denyPosting(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.deny(Posting.post)
 ```
 ```
 __sync__ trackMessageActivity(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "track")
     Tracking.start_tracking(user, "message")
 ```
 ```
 __sync__ trackPostingActivity(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "track")
     Tracking.start_tracking(user, "post")
 ```
 ```
 __sync__ unregister(user: User)
 
-    Authorizing.isLoggedIn(user)
+    Session-ing.userIsActive(user)
     Tracking.stop_tracking(user, activity) for activity in Tracking.get_tracked_activities(user)
+    Authenticating.unregister(user)
 ```
 
 ## Dependency Diagram
