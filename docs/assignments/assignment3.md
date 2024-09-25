@@ -38,8 +38,8 @@ __Operational Principle__:
 
 __State__: 
 
-    allowed: user -> __set__ action
-    denied: user -> __set__ action
+    allowed: One user -> __set__ action
+    denied: One user -> __set__ action
 
 __Actions__: 
 
@@ -145,7 +145,7 @@ __Operational Principle__:
 
 __State__:
 
-    posts: (user) -> __set__ Posts
+    posts: One user -> __set__ Posts
 
 __Actions__:
 
@@ -176,7 +176,7 @@ __Operational Principle__:
 __State__:
 
     actions: __set__(String s, Integer t)
-    user_actions: User -> actions
+    user_actions: One User -> actions
     tracked_users: __set__ User
 
 __Actions__:
