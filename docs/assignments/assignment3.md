@@ -19,7 +19,7 @@ Community Event Posting Board: Join a lively community by sharing and discoverin
 
 Social Wellness Notifications: To combat social isolation, GoldenBook sends timely reminders to users, encouraging them to reach out to friends and family, ensuring they stay connected.
 
-GoldenBook is crafted with input from elderly users to ensure accessibility and ease of use. We believe that everyone deserves a safe and supportive space to connect and thrive. Join us in creating a vibrant community with GoldenBook—where your connections matter!
+GoldenBook is crafted with input from elderly users to ensure accessibility and ease of use. Everyone deserves a safe and supportive space to connect and thrive. Join us in creating a vibrant community with GoldenBook—where your connections matter!
 
 
 ## Functional Design
@@ -103,7 +103,7 @@ __Actions__:
     notify(userA: User, userB: User, action: String)
         nudges[userA, userB] += action
 
-a
+
 ### Concept 4:
 
 __Name__: Messaging \[User]
@@ -115,8 +115,9 @@ __Operational Principle__:
     with content `content` to user b
 
 __State__:
+
     message: (user, user) -> String s
-    mesages: __set__ message
+    messages: __set__ message
 
 __Actions__:
     send(a: User, b: User, content: String)
@@ -202,7 +203,7 @@ __Actions__:
 
 __Name__: Session-ing \[Action]
 
-__Purpose__: enable authenticated actions for an extended period of time
+__Purpose__: enable authenticated actions for a period
 
 __Operational Principle__:
 
@@ -242,9 +243,9 @@ __Actions__:
 
 \{Nudging, Messaging, Session-ing, Authenticating\}
 
-\{Authorizing, Tracking, Messaging, Session-ing,Authenticating\}
+\{Authorizing, Tracking, Messaging, Session-ing, Authenticating\}
 
-\{Authorizing, Tracking, Posting, Session-ing,Authenticating\}
+\{Authorizing, Tracking, Posting, Session-ing, Authenticating\}
 
 \{Tracking, Messaging, Session-ing, Authenticating\}
 
@@ -265,13 +266,13 @@ __sync__ register(username, password: String, __out__ user: User)
 __sync__ login(username, password: String, __out__ user: User, out session: Session)
 
     Authenticating.authenticate(username, password, user)
-    Sessioning.start(user, session)
+    Session-ing.start(user, session)
 ```
 ```
 __sync__ authenticate(username, password: String, __out__ user: User, out session: Session)
 
     Authenticating.authenticate(username, password, user)
-    Sessioning.start(user, session)
+    Session-ing.start(user, session)
 ```
 ```
 __sync__ sendMessage(userA: User, userB: User, message: String)
