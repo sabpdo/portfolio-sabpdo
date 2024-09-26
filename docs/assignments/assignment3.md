@@ -70,7 +70,7 @@ __State__:
 
 __Actions__:
 
-    register(name, pass: String, verificationCode: String)
+    register(name, pass: String, role: String (optional))
         registered += (name, pass)
     
     unregister(user: User)
