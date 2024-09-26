@@ -7,17 +7,17 @@ layout: doc
 
 ## Pitch
 
-Are you looking for a way to connect with others and build a vibrant community? Introducing GoldenBook, the innovative social media and community-building app designed specifically for elderly individuals. Unlike traditional social media platforms, GoldenBook prioritizes your security while making connections effortless and enjoyable.
+Are you looking for a way to connect with others and build a vibrant community? Introducing __GoldenBook__, the innovative social media and community-building app designed specifically for elderly individuals. Unlike traditional social media platforms, GoldenBook prioritizes your security while making connections effortless and enjoyable.
 
 Key Features of GoldenBook:
 
-Trusted Caregiver Setting: With user authorization, trusted caregivers can manage certain actions on the primary user's device, ensuring peace of mind and support when needed.
+__Trusted Caregiver Setting:__ With user authorization, trusted caregivers can manage certain actions on the primary user's device, ensuring peace of mind and support when needed.
 
-Streak-Tracking for Healthy Habits: GoldenBook helps users stay on top of important habits, like updating privacy settings or taking medications, by tracking their progress and sending gentle reminders.
+__Streak-Tracking for Healthy Habits:__ GoldenBook helps users stay on top of important habits, like updating privacy settings or taking medications, by tracking their progress and sending gentle reminders.
 
-Community Event Posting Board: Join a lively community by sharing and discovering local events tailored for your interests, fostering connections and social engagement.
+__Community Event Posting Board:__ Join a lively community by sharing and discovering local events tailored for your interests, fostering connections and social engagement.
 
-Social Wellness Notifications: To combat social isolation, GoldenBook sends timely reminders to users, encouraging them to reach out to friends and family, ensuring they stay connected.
+__Social Wellness Notifications:__ To combat social isolation, GoldenBook sends timely reminders to users, encouraging them to reach out to friends and family, ensuring they stay connected.
 
 GoldenBook is crafted with input from elderly users to ensure accessibility and ease of use. Everyone deserves a safe and supportive space to connect and thrive. Join us in creating a vibrant community with GoldenBook—where your connections matter!
 
@@ -38,21 +38,18 @@ __Operational Principle__:
 
 __State__: 
 
-    allowed: One user -> __set__ action
     denied: One user -> __set__ action
 
 __Actions__: 
 
     allow(u:user, action: String)
-        allowed[u] += action
         u in denied - action
 
     deny(u:user, action: String)
         denied[u] += action
-        u in allowed - action
     
     isAllowed(u: user, action: String)
-        action in allowed[u]
+        action not in dnied[u]
 
 ### Concept 2: 
 
@@ -383,6 +380,9 @@ __sync__ unregister(user: User)
 ![Dependency Diagram](/assets/images/Assignments/DependencyDiagram.png)
 
 ## Wireframes
+
+Link to WireFrames: https://www.figma.com/design/FrijeU0YcwSkAAbuCnNssg/GoldenBook?node-id=0-1&t=YkF3by5es3HbNfjm-1
+
 
 ## Design tradeoffs
 
