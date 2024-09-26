@@ -1,5 +1,5 @@
 ---
-title: "Blog 1: Reflection on Lecture 6"
+title: "Blog 1: Reflection on Lecture 6 - Tightening vs. Loosening"
 layout: doc
 ---
 
