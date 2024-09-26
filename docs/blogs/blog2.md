@@ -5,7 +5,7 @@ layout: doc
 
 # Blog 2: Reflection on Lecture 7 - Data Design
 
-In Lecture 7, we explored various methods of designing databases, including the **Object model**, **Relational model**, and **Document model**. Each approach offers unique ways of structuring data, and I found it helpful to apply them to a real-world example like Canvas, a learning platform that many of us use daily.
+In Lecture 7, we explored various methods of designing databases, including the Object model, Relational model, and Document model. Each approach offers unique ways of structuring data, and I found it helpful to apply them to a real-world example like Canvas, a learning platform that many of us (including myself!) use daily, to better understand.
 
 ### Object Model
 
