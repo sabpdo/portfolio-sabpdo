@@ -93,12 +93,17 @@ __Operational Principle__:
 
 __State__: 
 
-    nudges: (user, user) -> __set__ String s
+    nudges: (user, user) -> __set__ Actions
+    nudge_times: __set__ (Action, Time)
 
 __Actions__: 
 
     notify(userA: User, userB: User, action: String)
         nudges[userA, userB] += action
+    
+    setPeriodicNotify(user: User, action: String, time: Time)
+        nudges[System User, user] += action
+        nudge_times += (Action, Time)
 
 
 ### Concept 4:
@@ -120,12 +125,6 @@ __Actions__:
     send(a: User, b: User, content: String)
         message[a, b] = content
         messages += message
-
-    unsend(a: User, b: User, content: String)
-        messages -= message[a, b, c]
-    
-    deleteAll(a: User)
-        messages -= message[a, b, content] for any b, content
     
     getMessages(a: User)
         message for message in messages if message[0] == a
@@ -178,17 +177,10 @@ __State__:
     tracked_users: __set__ User
 
 __Actions__:
-
-    start_tracking(u: User, action: String, time: T)
-        user_actions[u] = {}
-        tracked_users += u
     
     record(u: User, action: String, time: T)
         if u in tracked_users:
             user_actions[u] += (action, time)
-
-    stop_tracking(u: User, action: String)
-        tracked_users -= u
     
     get_tracked_activities(u: User, __out__: actions)
         actions in user_actions[u]
@@ -240,17 +232,21 @@ __Actions__:
 
 \{Nudging, Messaging, Session-ing, Authenticating\}
 
-\{Authorizing, Tracking, Messaging, Session-ing, Authenticating\}
-
-\{Authorizing, Tracking, Posting, Session-ing, Authenticating\}
+\{Authorizing, Tracking, Messaging, Posting, Session-ing, Authenticating\}
 
 \{Tracking, Messaging, Session-ing, Authenticating\}
 
-\{Tracking, Posting, Session-ing Authenticating\}
+\{Tracking, Posting, Session-ing, Authenticating\}
+
+\{Authorizing, Messaging, Session-ing, Authenticating\}
+
+\{Authorizing, Posting, Session-ing, Authenticating\}
+
+\{Authorizing, Nudging, Session-ing, Authenticating\}
 
 ### App Level & Synchronizations
 
-include Authenticating, Session-ing[Authenticating.User]  Messaging[Session-ing.User], Posting[Session-ing.User], 
+include Authenticating, Session-ing[Authenticating.User], Messaging[Session-ing.User], Posting[Session-ing.User], 
 Nudging[Messaging.Message], Tracking[Messaging.Messages], Tracking[Posting.Posts], 
 Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting]
 
@@ -279,13 +275,6 @@ __sync__ sendMessage(userA: User, userB: User, message: String)
     Messaging.sendMessage(userA, userB, message)
 ```
 ```
-__sync__ unsendMessage(userA: User, userB: User, message: String)
-    
-    Session-ing.userIsActive(userA)
-    Authorizing.isAllowed(userA, "unsend")
-    Messaging.unsendMessage(userA, userB, message)
-```
-```
 __sync__ post(user: User, p: Post)
     
     Session-ing.userIsActive(user)
@@ -312,6 +301,13 @@ __sync__ nudgeForMessage(userA: User, userB: User)
     Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "nudge")
     Nudging.notify(userA, userB, "message")
+```
+```
+__sync__ setPeriodicNudgeForMessage(user: User)
+
+    Session-ing.userIsActive(user)
+    Authorizing.isAllowed(user, "nudge")
+    Nudging.setPeriodicNotify(user, "message")
 ```
 ```
 __sync__ allowMessage(user: User)
@@ -354,24 +350,23 @@ __sync__ denyPosting(user: User)
     Authorizing.deny(Posting.post)
 ```
 ```
-__sync__ trackMessageActivity(user: User)
+__sync__ recordMessageActivity(user: User)
 
     Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "track")
-    Tracking.start_tracking(user, "message")
+    Tracking.record(user, "message")
 ```
 ```
-__sync__ trackPostingActivity(user: User)
+__sync__ recordPostingActivity(user: User)
 
     Session-ing.userIsActive(user)
     Authorizing.isAllowed(user, "track")
-    Tracking.start_tracking(user, "post")
+    Tracking.record(user, "post")
 ```
 ```
 __sync__ unregister(user: User)
 
     Session-ing.userIsActive(user)
-    Tracking.stop_tracking(user, activity) for activity in Tracking.get_tracked_activities(user)
     Authenticating.unregister(user)
 ```
 
@@ -384,29 +379,34 @@ __sync__ unregister(user: User)
 Link to WireFrames: https://www.figma.com/design/FrijeU0YcwSkAAbuCnNssg/GoldenBook?node-id=0-1&t=YkF3by5es3HbNfjm-1
 
 
-## Design tradeoffs
+## Design Tradeoffs
 
-### Design Decision I
-__Title__:
+### Decision I: Session/Authentication Dependency for Secure Messaging/Posting
 
-__Various Options__:
+**Options Considered**: 
+- Require authentication and session initialization before messaging/posting. (Chosen)
+- Allow messaging/posting without session dependency.
 
-__Rationale__:
-
-
-### Design Decision II
-
-__Title__:
-
-__Various Options__:
-
-__Rationale__:
+**Rationale**:  
+Given the app’s focus on privacy and security for elderly users, it's crucial to ensure that all interactions (messaging/posting)  occur within authenticated sessions. This prevents unauthorized use and reduces the risk of anonymous attacks or fraudulent activity. By requiring users to authenticate before posting/messaging, we create a safer environment where elderly users are less likely to encounter malicious interactions.
 
 
-### Design Decision III
+### Decision II: Restricting Notification Nudges to Improve Usability
 
-__Title__:
+**Options Considered**:  
+- Allow nudges for all actions.
+- Limit nudges to essential actions. (Chosen)
+- Provide adjustable settings for nudge frequency. (Chosen)
 
-__Various Options__:
+**Rationale**:  
+While nudges can help promote social engagement, overwhelming users with excessive notifications can lead to frustration—especially for elderly users who may be less familiar with frequent app interactions. I decided to restrict nudges to the most critical actions, primarily messaging, while allowing users to adjust the frequency of notifications.
 
-__Rationale__:
+
+### Decision III: Ethical Control Over User Accounts for Trusted Caregivers
+
+**Options Considered**:  
+- Provide caregivers full or view access to a user’s account.
+- Restrict caregivers to only allow or deny user actions. (Chosen)
+
+**Rationale**:  
+To preserve the autonomy of elderly users while providing necessary support, I decided to limit the level of access trusted caregivers have. Instead of granting full control or access to private conversations, caregivers can only allow or deny specific actions, like approving critical posts or messages. This avoids potential ethical concerns around surveillance and privacy violations, as full access could undermine the user’s independence. By striking this balance, the app empowers elderly users while still offering a safeguard against harmful or unsafe behavior. 
