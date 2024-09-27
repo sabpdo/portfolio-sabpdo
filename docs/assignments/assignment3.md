@@ -28,7 +28,7 @@ GoldenBook is crafted with input from elderly users to ensure accessibility and 
 
 __Name__: Authorizing \[Action]
 
-__Purpose__: provide access to perform specified action
+__Purpose__: provide access to perform a specified action
 
 __Operational Principle__:
     after authorizing user u
@@ -38,7 +38,7 @@ __Operational Principle__:
 
 __State__: 
 
-    denied: One user -> __set__ action
+    denied: User -> __set__ action
 
 __Actions__: 
 
@@ -49,7 +49,7 @@ __Actions__:
         denied[u] += action
     
     isAllowed(u: user, action: String)
-        action not in dnied[u]
+        action not in denied[u]
 
 ### Concept 2: 
 
@@ -67,6 +67,7 @@ __State__:
 
     registered: __set__ User
     username, password: registered -> __one__ String
+    role: User -> __one__ Role
 
 __Actions__:
 
@@ -88,22 +89,23 @@ __Purpose__: deliver a notification
 
 __Operational Principle__: 
 
-    a user/the system userA can nudge another user userB
-    to complete an action a
+    a user/the system `fromUser` can nudge another user `toUser`
+    to complete an action `a`
 
 __State__: 
 
-    nudges: (user, user) -> __set__ Actions
-    nudge_times: __set__ (Action, Time)
+    nudge: (User, User) -> __set__ Action
+    nudges: __set__ Nudge
+    nudge_times: User -> __set__ (nudge, Time)
 
 __Actions__: 
 
-    notify(userA: User, userB: User, action: String)
-        nudges[userA, userB] += action
+    notify(fromUser: User, toUser: User, action: String)
+        nudges[fromUser, toUser] += action
     
     setPeriodicNotify(user: User, action: String, time: Time)
         nudges[System User, user] += action
-        nudge_times += (Action, Time)
+        nudge_times[user] += (Action, Time)
 
 
 ### Concept 4:
@@ -113,21 +115,19 @@ __Name__: Messaging \[User]
 __Purpose__: deliver a communication
 
 __Operational Principle__:
-    user a can deliver a message
-    with content `content` to user b
+    user `sender` can deliver a message
+    with content `content` to user `receiver`
 
 __State__:
 
-    message: (user, user) -> String s
-    messages: __set__ message
+    messages: (User, User) -> __set__ Message
 
 __Actions__:
-    send(a: User, b: User, content: String)
-        message[a, b] = content
-        messages += message
+    send(sender: User, receiver: User, content: String)
+        messages += (sender, receiver, content)
     
-    getMessages(a: User)
-        message for message in messages if message[0] == a
+    getMessages(user: User)
+        message for message in messages if message[0] == user or message[1] == user
 
 ### Concept 5:
 
@@ -137,12 +137,12 @@ __Purpose__: share and save content
 
 __Operational Principle__:
 
-    user a can post a post p
+    user `a` can post a post `p`
     to their account
 
 __State__:
 
-    posts: One user -> __set__ Posts
+    posts: one User -> __set__ Posts
 
 __Actions__:
 
@@ -172,13 +172,11 @@ __Operational Principle__:
 
 __State__:
 
-    actions: __set__(String s, Integer t)
-    user_actions: One User -> actions
-    tracked_users: __set__ User
+    user_actions: one User -> __set__(Action, Time)
 
 __Actions__:
     
-    record(u: User, action: String, time: T)
+    record(u: User, action: String, time: Time)
         if u in tracked_users:
             user_actions[u] += (action, time)
     
@@ -232,8 +230,6 @@ __Actions__:
 
 \{Nudging, Messaging, Session-ing, Authenticating\}
 
-\{Authorizing, Tracking, Messaging, Posting, Session-ing, Authenticating\}
-
 \{Tracking, Messaging, Session-ing, Authenticating\}
 
 \{Tracking, Posting, Session-ing, Authenticating\}
@@ -244,10 +240,12 @@ __Actions__:
 
 \{Authorizing, Nudging, Session-ing, Authenticating\}
 
+\{Authorizing, Tracking, Messaging, Posting, Session-ing, Authenticating\}
+
 ### App Level & Synchronizations
 
 include Authenticating, Session-ing[Authenticating.User], Messaging[Session-ing.User], Posting[Session-ing.User], 
-Nudging[Messaging.Message], Tracking[Messaging.Messages], Tracking[Posting.Posts], 
+Nudging[Messaging], Tracking[Messaging.Messages], Tracking[Posting.Posts], 
 Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting]
 
 ```
@@ -262,52 +260,57 @@ __sync__ login(username, password: String, __out__ user: User, out session: Sess
     Session-ing.start(user, session)
 ```
 ```
+__sync__ logout(session: Sessin)
+
+    Session-ing.end(session)
+```
+```
 __sync__ authenticate(username, password: String, __out__ user: User, out session: Session)
 
     Authenticating.authenticate(username, password, user)
     Session-ing.start(user, session)
 ```
 ```
-__sync__ sendMessage(userA: User, userB: User, message: String)
+__sync__ sendMessage(sender: User, receiver: User, message: String)
     
-    Session-ing.userIsActive(userA)
-    Authorizing.isAllowed(userA, "message")
-    Messaging.sendMessage(userA, userB, message)
+    Session-ing.userIsActive(sender)
+    Authorizing.isAllowed(sender, Messaging)
+    Messaging.sendMessage(sender, receiver, message)
 ```
 ```
 __sync__ post(user: User, p: Post)
     
     Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "post")
+    Authorizing.isAllowed(user, Posting)
     Post.post(user, p)
 ```
 ```
 __sync__ edit(user: User, oldPost: Post, newPost: Post)
     
     Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "post")
+    Authorizing.isAllowed(user, Posting)
     Post.edit(user, oldPost, newPost)
 ```
 ```
 __sync__ delete(user: User, p: Post)
     
     Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "delete")
+    Authorizing.isAllowed(user, Posting)
     Post.delete(user, p)
 ```
 ```
-__sync__ nudgeForMessage(userA: User, userB: User)
+__sync__ nudgeForMessage(sender: User, receiver: User)
 
-    Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "nudge")
-    Nudging.notify(userA, userB, "message")
+    Session-ing.userIsActive(sender)
+    Authorizing.isAllowed(sender, Nudging)
+    Nudging.notify(sender, receiver, Message)
 ```
 ```
 __sync__ setPeriodicNudgeForMessage(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "nudge")
-    Nudging.setPeriodicNotify(user, "message")
+    Authorizing.isAllowed(user, Nudging)
+    Nudging.setPeriodicNotify(user, Message)
 ```
 ```
 __sync__ allowMessage(user: User)
@@ -327,14 +330,12 @@ __sync__ denyMessage(user: User)
 __sync__ allowTracking(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.allow(Tracking.start_tracking)
     Authorizing.allow(Tracking.record)
 ```
 ```
 __sync__ denyTracking(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.deny(Tracking.start_tracking)
     Authorizing.deny(Tracking.record)
 ```
 ```
@@ -353,14 +354,14 @@ __sync__ denyPosting(user: User)
 __sync__ recordMessageActivity(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "track")
+    Authorizing.isAllowed(user, Tracking)
     Tracking.record(user, "message")
 ```
 ```
 __sync__ recordPostingActivity(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.isAllowed(user, "track")
+    Authorizing.isAllowed(user, Tracking)
     Tracking.record(user, "post")
 ```
 ```
@@ -409,4 +410,4 @@ While nudges can help promote social engagement, overwhelming users with excessi
 - Restrict caregivers to only allow or deny user actions. (Chosen)
 
 **Rationale**:  
-To preserve the autonomy of elderly users while providing necessary support, I decided to limit the level of access trusted caregivers have. Instead of granting full control or access to private conversations, caregivers can only allow or deny specific actions, like approving critical posts or messages. This avoids potential ethical concerns around surveillance and privacy violations, as full access could undermine the user’s independence. By striking this balance, the app empowers elderly users while still offering a safeguard against harmful or unsafe behavior. 
+To preserve the autonomy of elderly users while providing necessary support, I decided to limit the level of access trusted caregivers have. Instead of granting full control or access to private conversations, caregivers can only allow or deny specific actions, like approving critical posts or messages. This avoids potential ethical concerns around surveillance and privacy violations, as full access could reduce the user’s independence. By striking this balance, the app empowers elderly users while still offering a safeguard against harmful or unsafe behavior. 
