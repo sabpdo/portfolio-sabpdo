@@ -123,8 +123,8 @@ __State__:
     messages: (User, User) -> __set__ Message
 
 __Actions__:
-    send(sender: User, receiver: User, content: String)
-        messages += (sender, receiver, content)
+    send(sender: User, receiver: User, message: Message)
+        messages[sender, receiver] += message
     
     getMessages(user: User)
         message for message in messages if message[0] == user or message[1] == user
@@ -271,11 +271,11 @@ __sync__ authenticate(username, password: String, __out__ user: User, out sessio
     Session-ing.start(user, session)
 ```
 ```
-__sync__ sendMessage(sender: User, receiver: User, message: String)
+__sync__ sendMessage(sender: User, receiver: User, message: Message)
     
     Session-ing.userIsActive(sender)
     Authorizing.isAllowed(sender, Messaging)
-    Messaging.sendMessage(sender, receiver, message)
+    Messaging.send(sender, receiver, message)
 ```
 ```
 __sync__ post(user: User, p: Post)
@@ -316,15 +316,13 @@ __sync__ setPeriodicNudgeForMessage(user: User)
 __sync__ allowMessage(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.allow(Messaging.sendMessage)
-    Authorizing.allow(Messaging.unsendMessage)
+    Authorizing.allow(Messaging.send)
 ```
 ```
 __sync__ denyMessage(user: User)
 
     Session-ing.userIsActive(user)
-    Authorizing.deny(Messaging.sendMessage)
-    Authorizing.deny(Messaging.unsendMessage)
+    Authorizing.deny(Messaging.send)
 ```
 ```
 __sync__ allowTracking(user: User)
