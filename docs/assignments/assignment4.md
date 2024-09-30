@@ -52,7 +52,7 @@ __State__:
 
 ### Concept 5:
 
-__Name__: Posting \[Item]
+__Name__: Posting \[User]
 
 __State__:
 
@@ -70,7 +70,7 @@ __State__:
 
 ### Concept 7: 
 
-__Name__: Session-ing \[Action]
+__Name__: Session-ing \[User]
 
 __State__:
 
@@ -80,13 +80,17 @@ __State__:
 ```
 app GoldenBook
     
-    include Authenticating, Session-ing[Authenticating.User], Messaging[Session-ing.User], Posting[Session-ing.User], Nudging[Messaging], Tracking[Messaging.Messages], Tracking[Posting.Posts], Authorizing[Messaging], Authorizing[Tracking], Authorizing[Posting]
+    include Authenticating, Session-ing[Authenticating.User], Messaging[Session-ing.User], Posting[Session-ing.User], Nudging[Messaging], Tracking[Messaging.Messages, Posting.Posts], Authorizing[Messaging, Tracking, Posting]
 ```
 
 ![Data Model](/assets/images/Assignments/DataModel.png)
+
+
+![Concept Diagram](/assets/images/Assignments/ConceptDiagram.png)
 Questions
 
-1. is this how i properly include things as generalizable parameters?
-2. I'm conufsed on the labels of the arrows? what if have duplicate values (e.g. time)
-3. if i have a separae user that nudges but it points towards messaging which has a user too how do i manage this. 
-4. is this the data model we want?
+
+don't have to redraw the arrow to user too even if dependency right (e.g. nudging has depending on user)
+
+I'm also confused on multiplicity -> should each nudge have multiple messages
+should session be a parameter of messaging as a state variable?
