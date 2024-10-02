@@ -94,4 +94,8 @@ app GoldenBook
 
 ## Deployed Website Link
 
+Link: https://golden-book-px12ov4gv-sabrina-dos-projects.vercel.app/
+
+Link to Github Repo: https://github.com/sabpdo/GoldenBook
+
 ## Design Reflection
