@@ -66,7 +66,7 @@ __State__:
 ### Concept 6: 
 
 __Name__: Recording \[Action]
-
+(was previously tracking in A3)
 __State__:
     
     time: Record -> one Date
