@@ -9,15 +9,19 @@ layout: doc
 
 ### Concept 1:
 
-__Name__: Authorizing \[Action]
+__Name__: Authorizing \[User, Action]
 
 __State Variables__: 
 
-    action: String
-    denied_actions: User -> __set__ action
+    user: Authorization -> one User
+    action: Authorization -> one String
+    denied_actions: User -> __set__ Authorization
     user_control_map: User -> __set__ User
 
 Note: all users are automatically allowed to do all actions by default.
+Action is a generic type that maps to different concepts in my implementation. More specifically, 
+the actions will be represented as a string in the implementation such that 
+```Action = "Message"|"Friend"|"Nudge"|"Record"|"Post"```.
 
 ### Concept 2: 
 
@@ -30,7 +34,7 @@ __State__:
 
 
 ### Concept 3:
-__Name__: Nudging \[Action]
+__Name__: Nudging \[User, Action]
 
 __State Variables__: 
 
@@ -111,8 +115,3 @@ Conversely, explicit authorization allows users to manually designate individual
 Another critical design decision involved the format of posts—text or image-based. While many social platforms leverage images for engagement, I prioritized text to safeguard the privacy of elderly users, who are more susceptible to misinformation. This trade-off emphasizes the app's functionality of using posting for community notifications and  prioritization of privacy.
 
 Lastly, I had to make a decision regarding messaging restrictions. I concluded that users who are unable to send messages should also be prevented from receiving them. While this approach ensures consistency, it does limit communication flexibility for users. However, in the long run, this decision prioritizes user security by protecting them from potentially malicious messages, such as those containing deceptive links.
-
-Questions:
-Can I add other items to record/track?
-
-Would both user and action be in the parameters for authorizing e.g.?
