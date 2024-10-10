@@ -15,7 +15,7 @@ __Operational Principle__:
     after user a authorizes user b
     to perform action c,
     user b can perform action c
-    until user a denies/revokes the action c.
+    until user a denies the action c for user b.
     user b can designate who user a is/who has control
     to perform authorizations on their account.
 
@@ -24,14 +24,41 @@ __State Variables__:
     user: Authorization -> one User
     action: Authorization -> one String
     denied_actions: User -> __set__ Authorization
-    user_control_map: User -> __set__ User
+    user_control_map: User -> __set__ User 
+
+__Actions__:
+
+    allow(u:user, action: String)
+        u in denied - action
+
+    deny(u:user, action: String)
+        denied[u] += action
+    
+    isAllowed(u: user, action: String)
+        action not in denied_actions[u]
+    
+    addAuthorizer(authorizer: user, authorizee: user)
+        if authorizer in user_control_map:
+            user_control_map[authorizer] += authorizee
+        else:
+            user_control_map[authorizer] = Set(authorizee)
+        
+    removeAuthorizer (authorizer: user, authorizee: user)
+        if authorizer not in user_control_map or not authorizee in user_control_map[authorizer]:
+            throw Error
+        else:
+            del authorizee in user_control_map[authorizer]
+    
+    ... rest of the functions are get functions
 
 Note: all users are automatically allowed to do all actions by default.
 Action is a generic type that maps to different concepts in my implementation. More specifically, 
 the actions will be represented as a string in the implementation such that 
-```Action = "Message"|"Friend"|"Nudge"|"Record"|"Post"```.
+```Action = "Message"|"Friend"|"Nudge"|"Record"|"Post"|"Authorize"```.
 
+Also, user_control_map is a map of a User ("Authorizer") to all their "Authorizee"s.
 
+To remove the repetitiveness of syncs in A3, I merged all the allow and deny functions into one single universal allow and deny functionality.
 
 ### Concept 2: 
 
@@ -89,8 +116,13 @@ __State__:
     action: Record -> one String
     user: Record -> one User
     records: __set__ Record
+    automatic_tracked_actions: __set__ Action
 
-This was previously "Tracking" in A3, but I re-named it to "Recording" to make it more clear.
+This was previously "Tracking" in A3, but I re-named it to "Recording" to make it more clear. Recording in my app allows for the functionality 
+for both (1) allowing a user to manually record their own actions (any action) and (2) to automatically record/track messaging & posting information if needed.
+
+The second functionality is uses automatic_tracked_actions to see which actions we are automatically tracking. The default is to 
+not track neither "Messaging" nor "Posting" unless enabled.
 
 ### Concept 7: 
 
@@ -100,6 +132,8 @@ __State__:
 
     active: __set__ Session
     user: active -> one User
+
+
 
 ```
 app GoldenBook
@@ -127,3 +161,7 @@ Conversely, explicit authorization allows users to manually designate individual
 Another critical design decision involved the format of posts—text or image-based. While many social platforms leverage images for engagement, I prioritized text to safeguard the privacy of elderly users, who are more susceptible to misinformation. This trade-off emphasizes the app's functionality of using posting for community notifications and  prioritization of privacy.
 
 Lastly, I had to make a decision regarding messaging restrictions. I concluded that users who are unable to send messages should also be prevented from receiving them. While this approach ensures consistency, it does limit communication flexibility for users. However, in the long run, this decision prioritizes user security by protecting them from potentially malicious messages, such as those containing deceptive links.
+
+
+1. Ask about the tracking concept to confirm ideas.
+Should I have it as an options
