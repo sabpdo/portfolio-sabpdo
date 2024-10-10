@@ -21,20 +21,19 @@ __Operational Principle__:
 
 __State Variables__: 
 
-    user: Authorization -> one User
-    action: Authorization -> one String
-    denied_actions: User -> __set__ Authorization
+    denied_actions: User -> __set__ allowed_action_type
+    allowed_action: allowed_action_type -> one AllowedAction
     user_control_map: User -> __set__ User 
 
 __Actions__:
 
-    allow(u:user, action: String)
+    allow(u:user, action: allowed_action_type)
         u in denied - action
 
-    deny(u:user, action: String)
+    deny(u:user, action: allowed_action_type)
         denied[u] += action
     
-    isAllowed(u: user, action: String)
+    isAllowed(u: user, action: allowed_action_type)
         action not in denied_actions[u]
     
     addAuthorizer(authorizer: user, authorizee: user)
@@ -52,11 +51,11 @@ __Actions__:
     ... rest of the functions are get functions
 
 Note: all users are automatically allowed to do all actions by default.
-Action is a generic type that maps to different concepts in my implementation. More specifically, 
+AllowedAction is a generic type that maps to different concepts in my implementation. More specifically, 
 the actions will be represented as a string in the implementation such that 
-```Action = "Message"|"Friend"|"Nudge"|"Record"|"Post"|"Authorize"```.
+```AllowedAction = "Message"|"Friend"|"Nudge"|"Record"|"Post"```.
 
-Also, user_control_map is a map of a User ("Authorizer") to all their "Authorizee"s.
+Also, user_control_map is a map of a User ("Authorizer") to all their Authorizee's.
 
 To remove the repetitiveness of syncs in A3, I merged all the allow and deny functions into one single universal allow and deny functionality.
 
