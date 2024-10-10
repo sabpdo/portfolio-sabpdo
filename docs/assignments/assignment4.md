@@ -11,6 +11,14 @@ layout: doc
 
 __Name__: Authorizing \[User, Action]
 
+__Operational Principle__:
+    after user a authorizes user b
+    to perform action c,
+    user b can perform action c
+    until user a denies/revokes the action c.
+    user b can designate who user a is/who has control
+    to perform authorizations on their account.
+
 __State Variables__: 
 
     user: Authorization -> one User
@@ -22,6 +30,8 @@ Note: all users are automatically allowed to do all actions by default.
 Action is a generic type that maps to different concepts in my implementation. More specifically, 
 the actions will be represented as a string in the implementation such that 
 ```Action = "Message"|"Friend"|"Nudge"|"Record"|"Post"```.
+
+
 
 ### Concept 2: 
 
@@ -71,14 +81,16 @@ __State__:
 
 ### Concept 6: 
 
-__Name__: Recording \[Action]
-(was previously tracking in A3)
+__Name__: Recording \[User, Action]
+
 __State__:
     
     time: Record -> one Date
     action: Record -> one String
     user: Record -> one User
     records: __set__ Record
+
+This was previously "Tracking" in A3, but I re-named it to "Recording" to make it more clear.
 
 ### Concept 7: 
 
