@@ -47,7 +47,7 @@ __Gestalt grouping__
 
 Spotify effectively leverages Gestalt principles of grouping, particularly when it comes to organizing playlists, libraries, and categories. The "Library" section, for instance, uses icons and layout choices that align with user expectations, making it easy to navigate through playlists, albums, and recently played tracks. Elements are grouped logically, allowing for a clear distinction between categories like "Liked Songs" or "Recently Played."
 
-![Gestalt grouping](/assets/images/Blogs/B3/gestalt.PNG)
+![Gestalt grouping](/assets/images/Blogs/B3/gestalt.png)
 
 
 ### Linguistic Heuristics
