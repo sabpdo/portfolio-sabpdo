@@ -13,8 +13,6 @@ Spotify has undergone numerous design iterations over the years, but at its core
 
 __Usability__:
 
-Usability is a critical component of user interaction design, determining how easily and efficiently users can accomplish their goals within an application.
-
 #### Discoverability (first use):
 
 Spotify's user interface is relatively intuitive for new users, largely because it follows familiar patterns seen in other apps. For instance, Spotify borrows design conventions from other popular platforms like Apple Music, making it easier for users to navigate its functionality without prior instruction. New users can easily find key features like the search bar, playlists, and the home page, which are prominently displayed.
@@ -41,7 +39,7 @@ Spotify excels in some areas of accessibility, but it has room for improvement. 
 
 __Fitt's Law__: 
 
-Spotify’s current design positions elements closer together than in previous iterations (which is good according to Fitt's law). While this compact layout may seem like an efficient use of space, it has ironically led to notable user dissatisfaction. This stems from the delicate balance between optimizing space and maintaining functionality, particularly when it comes to the Library sidebar and the usability of buttons on mobile devices.
+Spotify’s current design positions elements closer together than in previous iterations (which is good according to Fitt's law). While this compact layout may seem like an efficient use of space, it has ironically led to a lot of user dissatisfaction (source: https://www.reddit.com/r/truespotify/comments/1375hkm/new_spotify_desktop_ui_on_both_windows_and_macos/). This stems from the delicate balance between optimizing space and maintaining functionality, particularly when it comes to the Library sidebar and the usability of buttons on mobile devices.
 
 __Gestalt grouping__
 
@@ -54,7 +52,7 @@ Spotify effectively leverages Gestalt principles of grouping, particularly when 
 
 __Speak the user's language__: 
 
-Spotify uses familiar language that resonates with its user base. For instance, the use of pill-shaped buttons and icons for navigation helps users quickly understand actions like switching between playlists, albums, or search. However, Spotify occasionally employs metaphors that may confuse users unfamiliar with them. For instance, certain icon designs may not immediately make sense to someone who hasn’t used the app before or isn’t familiar with these streaming metaphors/emojis.
+Spotify uses familiar language that resonates with its user base. For instance, the use of pill-shaped buttons and icons for navigation helps users quickly understand actions like switching between playlists, albums, or search. However, Spotify occasionally utilizes metaphors that may confuse users not used to them. For example, certain icon designs may not immediately make sense to someone who hasn’t used the app before or isn’t familiar with these streaming metaphors/emojis.
 
 __Consistency__: 
 Spotify maintains consistency both internally and with other mobile apps, ensuring a coherent experience across platforms. The placement of key buttons, such as play, pause, and skip, remains uniform across devices, while the overall layout remains familiar. This consistency reduces the learning curve for users switching between mobile, desktop, or tablet versions. Furthermore, it is consistent with most of the other functionality of the platforms it originates in (at least for Apple).
