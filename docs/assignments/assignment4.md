@@ -42,7 +42,7 @@ __Actions__:
         else:
             user_control_map[authorizer] = Set(authorizee)
         
-    removeAuthorizer (authorizer: user, authorizee: user)
+    removeAuthorizer(authorizer: user, authorizee: user)
         if authorizer not in user_control_map or not authorizee in user_control_map[authorizer]:
             throw Error
         else:
@@ -137,7 +137,7 @@ __State__:
 ```
 app GoldenBook
     
-    include Authenticating, Session-ing[Authenticating.User], Messaging[Session-ing.User], Posting[Session-ing.User], Nudging[Messaging], Tracking[Messaging.Messages, Posting.Posts], Authorizing[Messaging, Tracking, Posting, Nudging]
+    include Authenticating, Session-ing[Authenticating.User], Messaging[Session-ing.User], Posting[Session-ing.User], Nudging[Sessioning-ing.User, Messaging], Tracking[Messaging.Messages, Posting.Posts], Authorizing[Messaging, Tracking, Posting, Nudging]
 ```
 
 ## Data Model 
