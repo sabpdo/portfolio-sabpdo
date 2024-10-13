@@ -27,7 +27,7 @@ __State Variables__:
     allowed_action_type: one action
     user_control_map: User -> __set__ User 
 
-__Actions__:
+__Actions__ (ones most relevant/changed from A3):
 
     allow(u:user, action: string)
         u in denied - action
@@ -50,7 +50,7 @@ __Actions__:
         else:
             del authorizee in user_control_map[authorizer]
     
-    ... rest of the functions are get functions
+    ... 
 
 Note: all users are automatically allowed to do all actions by default.
 Action is a generic type that maps to different concepts in my implementation. More specifically, 
@@ -121,7 +121,7 @@ This was previously "Tracking" in A3, but I re-named it to "Recording" to make i
 for both (1) allowing a user to manually record their own actions (any action) and (2) to automatically record/track messaging & posting information if needed.
 
 For automatic recording of messaging and posting, the syncs __startAutomaticRecordForMessaging__ and __startAutomaticRecordForPosting__
-work such that when a message is sent/a post is posted, a record will automatically be created. (and similar logic but for stop)
+work such that when a message is sent/a post is posted, a record will automatically be created. (Similar logic exists for stop).
 
 ### Concept 7: 
 
