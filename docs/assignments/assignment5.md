@@ -69,3 +69,5 @@ Wireframes for reference from A3: https://www.figma.com/design/FrijeU0YcwSkAAbuC
 Github Repo for FrontEnd: 
 https://github.com/sabpdo/goldenbook-frontend 
 
+
+Deployed Site: https://goldenbookofficial.vercel.app/ 
