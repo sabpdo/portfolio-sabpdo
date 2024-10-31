@@ -146,7 +146,7 @@ Brigitte’s feedback reflects common usability challenges tied to initial onboa
 1. Clarify Habit Tracking & Nudging Functionality
     - __Level:__ Conceptual
     - __Severity:__ Major
-    - __Flaw/Opportunity:__ Kartik and Brigitte’s difficulty understanding the automatic tracking feature and nudges suggests a lack of clarity in the features and their functionality/purpose. He expected immediate feedback or an explanation on how the tracking and nudging worked, leading to frustration as he tried to engage with it repeatedly without results.
+    - __Flaw/Opportunity:__ Kartik and Brigitte’s difficulty understanding the automatic tracking feature and nudges suggests a lack of clarity in the features and their functionality/purpose. For example, Kartik expected immediate feedback or an explanation on how the tracking and nudging worked, leading to frustration as he tried to engage with it repeatedly without results.
     - __Why It’s Occurring:__ The habit tracking system and nudges currently lacks descriptive tooltips or onboarding instructions, resulting in confusion, especially for users unfamiliar with automatic tracking. Short labels without context can lead to misinterpretations of functionality.
     - __Proposed Solution:__ Adding a tooltip with a concise description when the user hovers over the tracking/nudging button would help set expectations. Additionally, an optional onboarding screen explaining the tracking feature upon first use could improve understanding and reduce frustration.
 2. Enable "Enter" Key for Post Submission
