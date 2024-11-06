@@ -48,7 +48,9 @@ Matthew Quispe
 __Problem Statement:__
 
 The USDA estimates that 30-40% of the US food supply, worth $161 billion, is wasted. When food is discarded, it not only is a large financial loss but also generates environmental harm. As food decomposes in landfills, it releases methane—a greenhouse gas up to 25 times more potent than carbon dioxide in its short-term climate impact. In fact, food waste alone contributes 6-8% of all human-driven greenhouse gas emissions globally. The environmental toll does not stop at emissions; producing, transporting, and disposing of this wasted food consumes significant water and energy resources, further straining our ecosystems and intensifying climate change.
+
 Meanwhile, the social implications of food waste are equally grave. Approximately 18 million U.S. households experience food insecurity each year, which means that millions of people do not have reliable access to enough nutritious food to lead healthy lives. This paradox—of food scarcity amidst surplus—is unnecessary, as there is more than enough food produced to meet the nutritional needs of every American.
+
 Given the sheer scale and urgency of the issue, addressing food waste presents an invaluable opportunity to reduce greenhouse gases, conserve vital resources, and combat food insecurity. The economic costs, environmental degradation, and human suffering associated with food waste require action.
 
 __Solution Hypothesis:__
@@ -137,6 +139,10 @@ _Potential Interviewee Roles_:
 #### Why We Chose Tam
 Tam’s interview aimed to uncover practical challenges and gaps in current food waste management practices within food service settings. A 25-year-old with experience across five different food service establishments—from large restaurants and family-owned Vietnamese eateries to a café—Tam was chosen for her firsthand knowledge of operational practices. In her role as a barista, she regularly encounters food and beverage waste, giving her a direct perspective on the day-to-day waste handling practices in her café. Tam’s insights are crucial for understanding the informal and formal waste management policies at her workplace, helping to reveal potential areas for improved recycling and waste reduction initiatives.
 
+#### Why We Chose Nicole
+
+The purpose of this interview is to identify practical challenges and gaps in existing practices related to food waste management within a food service environment, specifically in a restaurant setting. Nicole, a 19-year-old college student whose parents own and run a Chinese restaurant was chosen as an interviewee for her experience in the food industry within a family-run business. As someone involved in the day-to-day operations of the restaurant, she likely has first-hand insight into the challenges of inventory management and implementation of sustainable practices at the restaurant. We may be able to better understand how small family-owned restaurants navigate food waste and what barriers and bottlenecks they face.
+
 
 ## Interview Plans
 
@@ -162,8 +168,74 @@ Questions:
     - What do you think might be the biggest logistical challenges in setting up a system where leftover food is donated to those in need?
     - Do you think employees would be willing to take on extra responsibilities if it meant leftover food could be repurposed for food-insecure people?
 
+#### Raw Interview Notes
 
 <iframe src="https://drive.google.com/file/d/1QKJj54AyzLh5FfXyeOYZyIRH6I5D2V-L/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Interview II: Nicole
+
+#### Interview Plan: 
+1. Could you describe a typical day and how food handling occurs at the restaurant?
+    - How is the inventory of the restaurant managed day to day?
+    - How is leftover or expired food typically managed at the end of the day?
+    - What kinds of foods or items are most commonly discarded?
+2. What motivates you or your family to reduce food waste, if at all? Is it driven by restaurant policy, personal values, or something else?
+    - If there are restaurant policies: are there any specific policies at the restaurant regarding food waste?
+3. What do you see as the main challenges or barriers to reducing food waste in your restaurant?
+    - How do you feel about the amount of food that goes to waste? Do you think it’s a problem?
+    - Have you ever noticed any changes in policy or practice regarding food waste over the years at the restaurant?
+4. If you could design a more sustainable waste practice in the restaurant, what would it look like? 
+    - Possible prompting: how do you feel about food waste reduction efforts such as donation or composting?
+    - Possible followup: what are some foods that could be donated?
+    - Why do you think it’s not currently being practiced?
+5. If there were a program to donate leftover food or near expiry food items, would you feel comfortable participating in it? Why or why not?
+    - Have you seen any instances of food redistribution efforts at the restaurant or elsewhere? What did you observe as the main challenges?
+    - What do you think would encourage or discourage food service businesses from participating in a food redistribution program?
+    - What do you think might be the biggest logistical challenges in setting up a system where leftover food is donated to those in need?
+        - Do you think as a small business, your restaurant would be willing to take on extra responsibilities if it meant leftover food could be repurposed for food-insecure people?
+        - What types of food services do you think would be fit for this food redistribution program. 
+
+#### Raw Interview Notes:
+
+<iframe src="https://drive.google.com/file/d/1Gpqes4rklDdNIYRoNfKOES0HP3KMWosX/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Interview III: Anita
+
+#### Interview Planning:
+1. Can you tell me a bit about your experience with food insecurity? (If they’re comfortable sharing)
+2. How long have you been experiencing food insecurity, and have there been particular times or events that made it worse?
+3. Do you live in an area where access to food is generally easy or challenging? (For example, rural vs. urban)
+4. What are the biggest challenges you face when trying to access food?
+5. Are there specific times of the month or year when getting food becomes particularly difficult?
+6. What kinds of foods do you find hardest to access or afford?
+7. How much time do you usually spend each week trying to get food?
+8. Where do you usually get your food from? (e.g., grocery stores, food pantries, meal programs, friends/family, etc.)
+9. Are there resources or programs you currently use to help you access food (such as SNAP, food pantries, community meals)?
+10. Do you feel that the food you get from these sources meets your dietary needs/preferences?
+11. How often do you find yourself compromising on the quality or type of food due to cost or availability?
+12. Do you use a smartphone or other technology to find or access food resources?
+13. Have you used any apps, websites, or social media to help find food resources, discounts, or other food-related information?
+14. If so, what did you find helpful or unhelpful about these digital tools?
+15. Would you feel comfortable using an app to help access food resources? Why or why not?
+16. How comfortable do you feel reaching out for help with food access?
+17. Are there any social or emotional barriers that make it difficult for you to use certain food resources?
+18. Do you think an app could help reduce any stigma or make it easier to ask for food assistance?
+19. Are there specific types of food that are important or difficult for you to have access to? (e.g., fresh produce, protein sources, culturally relevant foods)
+20. Do you have any dietary restrictions or preferences that make it harder to find food that meets your needs?
+21. How often do you find yourself unable to get the food you need due to dietary restrictions or lack of availability?
+22. Do you feel supported by your local community when it comes to food access?
+23. Are there any local groups, friends, or family members who help you with food when things get tough?
+24. How could a digital tool help you feel more connected to a community of support?
+25. Besides food, are there other basic needs that are difficult for you to meet (like housing, healthcare, transportation)?
+26. If an app could connect you to other resources beyond food (like housing or job resources), would that be helpful?
+27. Is there anything you wish more people understood about food insecurity?
+28. Are there any specific ways you think technology could make a difference in addressing food insecurity?
+29. Do you have any concerns or suggestions about creating an app to address food insecurity?
+30. Is there anything else you’d like to share that we haven’t covered?
+
+#### Raw Interview Notes
+
+<iframe src="https://drive.google.com/file/d/1mMIoz8AGlxd6YOQV7dNz3yEmPWCZfz7k/preview" width="640" height="480" allow="autoplay"></iframe>
 
 ## Interview Summaries
 
