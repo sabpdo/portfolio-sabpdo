@@ -143,6 +143,10 @@ Tam’s interview aimed to uncover practical challenges and gaps in current food
 
 The purpose of this interview is to identify practical challenges and gaps in existing practices related to food waste management within a food service environment, specifically in a restaurant setting. Nicole, a 19-year-old college student whose parents own and run a Chinese restaurant was chosen as an interviewee for her experience in the food industry within a family-run business. As someone involved in the day-to-day operations of the restaurant, she likely has first-hand insight into the challenges of inventory management and implementation of sustainable practices at the restaurant. We may be able to better understand how small family-owned restaurants navigate food waste and what barriers and bottlenecks they face.
 
+#### Why We Chose Anita
+
+Anita is a 32-year-old living in a rural town in Alabama with her wife, her father, and her pets. After the loss of her grandmother and her wife losing her job at a local fast food restaurant, Anita and her family have struggled with food insecurity on a daily basis, especially given rising grocery prices after COVID-19, limited access to food pantries, and the stigma she experiences as a lesbian in her highly religious community. She faces several obstacles to accessing food as a disabled person and primary caregiver in a small, resource-limited town, so we thought she would be able to provide unique insight into the challenges faced with respect to food insecurity. Her story highlights the need for solutions that address both practical and social barriers, making her an ideal interviewee.
+
 
 ## Interview Plans
 
@@ -236,6 +240,30 @@ Questions:
 #### Raw Interview Notes
 
 <iframe src="https://drive.google.com/file/d/1mMIoz8AGlxd6YOQV7dNz3yEmPWCZfz7k/preview" width="640" height="480" allow="autoplay"></iframe>
+
+### Interview IV: Rose & Kate
+
+#### Interview Planning:
+
+1. Your cause is very important but often seems to go under the radar. What does your team do day in, day out, and how do we see the impacts in the MIT community? 
+    - What is the scale of your impact, or is it mostly long term research and studies and planning?
+    - How do you guys combat food insecurity on campus?
+    - Do you have any anecdotes or success stories?
+2. What are the main challenges your team faces when combating food insecurity on campus?
+3. How do you feel about the dining and cafe options on campus, and how do you address the often negative feedback they get among students?
+4. I know there was a questionnaire you guys did in the spring, or someone associated with you – were there any surprises?
+5. What has your team done to address food waste? 
+6. What does your team do in terms of food redistribution? Ins and outs, challenges?
+7. Are there any gaps or inefficiencies in the current food redistribution process that you’ve identified?
+8. Have you ever partnered with restaurants and getting their leftover food to those in need?
+    - If not, how would you feel about such a partnership? 
+    - What would the unexpected challenges of such a program be?
+9. What logistical issues arise when redistributing surplus food? Are there particular barriers to getting food from restaurants or businesses to shelters or food banks?
+10. What do you think food shelters and food-insecure individuals need most from a food redistribution initiative, beyond just receiving food?
+
+#### Raw Interview Notes
+
+<iframe src="https://drive.google.com/file/d/1QW4BljsZeUOmgMoR2C7BNibsluHfPTh8/preview" width="640" height="480" allow="autoplay"></iframe>
 
 ## Interview Summaries
 
