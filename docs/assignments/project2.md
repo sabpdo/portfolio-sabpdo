@@ -280,7 +280,7 @@ Estimating one's carbon footprint can be challenging, especially when it comes t
 
 
 
-### Concept I
+### Concept I:
 
 
 __Name__: Posting [User, Item]
@@ -291,6 +291,7 @@ __Purpose:__ A user can share an item for other users to interact with.
 
 __Operational Principle:__ User `a` can post an Item `item` to their account.
 
+### Concept II:
 
 __Name__: Donating [User, Item]
 
@@ -301,7 +302,7 @@ __Purpose:__ A user can donate an item to others
 __Operational Principle:__ User `user` can donate item `item` of a specified quantity `quantity` to a `donatee`
 
 
-### Concept II
+### Concept III:
 
 
 __Name__: Claiming [User, Item]
@@ -312,7 +313,7 @@ __Purpose:__ A User can claim an Item for themself.
 
 __Operational Principle:__ User `user` can claim Item `item` for themself, after which other Users cannot claim it.
 
-### Concept III
+### Concept IV:
 
 __Name__: Delivering [User, Item]
 
@@ -321,7 +322,7 @@ __Purpose:__ A user can deliver a specific Item.
 __Operational Principle:__ User `user` will deliver a specific Item `item`.
 
 
-### Concept IV
+### Concept V:
 
 
 __Name:__ Expiring [Item]
@@ -333,7 +334,7 @@ __Purpose:__ Handle expiration of short-lived Items.
 __Operational Principle:__ If you create an Item `i` with an expiration time `t`, after the time `t` the Item is no longer available.
 
 
-### Concept V
+### Concept VI:
 __Name:__ Messaging [User]
 
 
@@ -342,7 +343,7 @@ __Purpose:__ Allows messaging between respective Users.
 __Operational Principle:__ User `sender` can deliver a message with content `content` to User `receiver`.
 
 
-### Concept VI
+### Concept VII:
 
 
 __Name:__ Tagging [Item]
