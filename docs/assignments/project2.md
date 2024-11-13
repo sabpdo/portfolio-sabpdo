@@ -267,15 +267,15 @@ Estimating one's carbon footprint can be challenging, especially when it comes t
 
 ### Features We Chose:
 - #2 Carpool/Volunteer Matching for Food Access
- - Relevant Concept: Delivering
+  - Relevant Concept: Delivering
 - #3 Surplus Food Listing for Redistribution
- - Relevant Concept: Posting
+  - Relevant Concept: Posting
 - #5 Filtered and Sortable Listings by Food Type
- - Relevant Concept: Tagging
+  - Relevant Concept: Tagging
 - #19 In-app Messaging for Users/Volunteers
- - Relevant Concept: Messaging
+  - Relevant Concept: Messaging
 - #25 Donated Food Claiming
- - Relevant Concepts: Posting, Claiming
+  - Relevant Concepts: Posting, Claiming
 
 
 
@@ -310,13 +310,18 @@ __Name__: Claiming [User, Item]
 __Purpose:__ A User can claim an Item for themself.
 
 
-Operational Principle: User `user` can claim Item `item` for themself, after which other Users cannot claim it.
-Delivering [User, Item]
-Purpose: A user can deliver a specific Item.
-Operational Principle: User `user` will deliver a specific Item `item`.
-
+__Operational Principle:__ User `user` can claim Item `item` for themself, after which other Users cannot claim it.
 
 ### Concept III
+
+__Name__: Delivering [User, Item]
+
+__Purpose:__ A user can deliver a specific Item.
+
+__Operational Principle:__ User `user` will deliver a specific Item `item`.
+
+
+### Concept IV
 
 
 __Name:__ Expiring [Item]
@@ -328,15 +333,16 @@ __Purpose:__ Handle expiration of short-lived Items.
 __Operational Principle:__ If you create an Item `i` with an expiration time `t`, after the time `t` the Item is no longer available.
 
 
-### Concept IV
+### Concept V
 __Name:__ Messaging [User]
 
 
 __Purpose:__ Allows messaging between respective Users.
+
 __Operational Principle:__ User `sender` can deliver a message with content `content` to User `receiver`.
 
 
-### Concept V
+### Concept VI
 
 
 __Name:__ Tagging [Item]
@@ -349,7 +355,9 @@ __Operational Principle:__ If you create an Item `i`, tags can be added to aid i
 
 
 ```
-include Authenticating, Sessioning[Authenticating.User], Messaging[Sessioning.User], Posting[Sessioning.User, Expiring.Item], Delivering[Claiming.User, Posting.Item], Claiming[Sesssioning.User, Posting.Item]
+include Authenticating, Sessioning[Authenticating.User], 
+  Messaging[Sessioning.User], Posting[Sessioning.User, Expiring.Item], 
+  Delivering[Claiming.User, Posting.Item], Claiming[Sesssioning.User, Posting.Item]
 ```
 
 
