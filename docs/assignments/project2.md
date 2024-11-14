@@ -430,15 +430,15 @@ Estimating one's carbon footprint can be challenging, especially when it comes t
 
 ### Features We Chose:
 - #2 Carpool/Volunteer Matching for Food Access
- - Relevant Concept: Delivering
+    - Relevant Concept: Delivering
 - #3 Surplus Food Listing for Redistribution
- - Relevant Concept: Posting
+    - Relevant Concept: Posting
 - #5 Filtered and Sortable Listings by Food Type
- - Relevant Concept: Tagging
+    - Relevant Concept: Tagging
 - #19 In-app Messaging for Users/Volunteers
- - Relevant Concept: Messaging
+    - Relevant Concept: Messaging
 - #25 Donated Food Claiming
- - Relevant Concepts: Posting, Claiming
+    - Relevant Concepts: Posting, Claiming
 
 
 
