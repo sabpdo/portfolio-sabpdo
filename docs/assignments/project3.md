@@ -144,26 +144,26 @@ __Actions:__
 
     assertIsNotClaimed(i: Item):
         If claims[i] != None:
-        Raise Error
+        	raise Error
 
 
     assertIsNotCompleted(c: Claim):
         If c.status == “completed”:
-            Raise Error
+            raise Error
 
 
     isItemClaimed(i: Item):
-        Return claims[i] != None
+        return claims[i] != None
 
 
     assertIsPickup(c: Claim)
-        If c.method != “Pickup”:
-            Raise Error
+        if c.method != “Pickup”:
+            raise Error
 
 
     assertIsDelivery(c: Claim)
-        If c.method != “Delivery”:
-            Raise Error
+        if c.method != “Delivery”:
+            raise Error
 
 
 ### Concept III:
@@ -802,7 +802,7 @@ There are plenty of examples of situational context in our wireframes – as des
 
 
 ### Physical Criteria: Accelerators 
-One aspect that the app is lacking is accelerators, which are shortcuts for expert users. So far, we have authentication flow and intuitive flows for businesses, volunteers, and recipients, as well as easily filterable tags for recipients. For businesses, we could add a way to tabulate their most frequent past listings and easily repost/duplicate them. Additionally, they could schedule postings in advance if they are sure they will have at least a baseline number of leftovers at a certain time of day. There are many little opportunities throughout the app to include accelerators that speed up the usage experience.
+One aspect that the app is lacking is accelerators, which are shortcuts for expert users. So far, we have authentication flow and intuitive flows for businesses, volunteers, and recipients, as well as easily filterable tags for recipients. For businesses, we could add a way to tabulate their most frequent past listings and easily repost/duplicate them. Additionally, they could schedule postings in advance if they are sure they will have at least a baseline number of leftovers at a certain time of day, preferably with the click of one button. There are many little opportunities throughout the app to include accelerators that speed up the usage experience.
 
 
 ### Linguistic Level: Consistency 
@@ -900,9 +900,9 @@ We structured our tasks to finish the MVP features, pages for tasks 1-3, and 4 i
 - **Tagging**
   - Deadline: **Friday 12/1**
   - Backend
-    - Implement concept and routes for Tagging, while validating that only donors can modify tags (but recipients can view tags) - **Emily**
+    - Implement concept and routes for Tagging, while validating that only donors can modify tags (but recipients can view tags) - **Claire** & **Emily**
   - Frontend
-    - Recipients and donors should be able to filter both the pickup & delivery pages by tags - **Claire**
+    - Recipients and donors should be able to filter both the pickup & delivery pages by tags - **Claire** & **Emily**
 - **Messaging**
   - Deadline: **Friday 12/1**
   - Backend
