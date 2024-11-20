@@ -40,7 +40,9 @@ __Actions:__
 
 
     editPost(oldPost: Post, newPost: Post)
-        ``` in editing a post, the relevant fields that are updated will be updated in the states as well```
+        ``` 
+        in editing a post, the relevant fields that are updated will be updated in the states as well
+        ```
         posts -= oldPost
         posts += newPost
     
@@ -86,7 +88,7 @@ __Name__: Claiming [User, Item]
 __Purpose:__ Users can reserve an item as their own.
 
 
-__Operational Principle:__ User `user` can select an `item` for themself, after which other users cannot claim it unless the item is unclaimed. When a user claims an item, they can request for the item to be claimed via “Pickup” or “Delivery”. If a user is requesting for “Delivery”, they must also list their address. When an `item` is claimed, it means the user is requesting the item for themself; however, only when the claim is changed to `completed` does it mean that the user has successfully received the item.
+__Operational Principle:__ User `user` can select an `item` for themself, after which other users cannot claim it unless the item is unclaimed. When a user claims an item, they can request for the item to be claimed via `Pickup` or `Delivery`. If a user is requesting for `Delivery`, they must also list their address `claimer_address`. When an `item` is claimed, it means the user is requesting the item for themself (the status is `Requested`); however, only when the claim is changed to `completed` does it mean that the user has successfully received the item.
 
 
 
@@ -175,7 +177,7 @@ __Actions:__
 **Purpose:** A user can deliver a specific Item to a designated user by a certain time.
 
 
-**Operational Principle:** User `deliverer` will deliver a specific food donation to a User `receiver` that is designated in a Request `delivery_request` by a designated time `t`. When a volunteer `deliverer` initially volunteers to complete a delivery, it will be marked as `not started` until they pick up the item from the restaurant, which its status will then become `in progress`. After the delivery is marked completed, the designated item `item` should have been `delivered` to the `receiver`.
+**Operational Principle:** User `deliverer` will deliver a specific food donation to a User `receiver` that is designated in a Request `delivery_request` by a designated time `t`. When a volunteer `deliverer` initially volunteers to complete a delivery, it will be marked as `not started` until they pick up the item from the restaurant, which its status will then become `in progress`. After the delivery is marked `completed`, the designated item `item` should have been delivered to the `receiver`.
 
 
 **State:**
