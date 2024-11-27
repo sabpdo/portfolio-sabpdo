@@ -1,5 +1,5 @@
 ---
-title: "Project 4: Alpha Release
+title: "Project 4: Alpha Release"
 layout: doc
 ---
 
