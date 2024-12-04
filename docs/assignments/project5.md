@@ -46,19 +46,35 @@ password: password
 ```
 to see one of the example profiles!
 
-I also have a couple of other false accounts besides my sample. I have populated the app with real messages to the accounts, food donations posts, food request claims, and food deliveries. 
+We also have a couple of other false accounts besides these listed sample accounts (e.g. FlourBakery, TeaDo, Mad Monkfish). I have populated the app with real messages to the accounts, food donations posts, food request claims, and food deliveries.
 
-Sample Conversation:
-![Messages]TODO
+__Sample Conversation:__
+![Messages](/assets/images/Assignments/P5/conversation.png)
 
-Food Donation Posts:
-![Posts]TODO
 
-Food Claims
-![Claim]TODO
+__Food Donation Posts:__
+![Posts](/assets/images/Assignments/P5/available_food.png)
 
-Food Deliveries
-![Delivery]
+(Filtered Posts)
+![Posts](/assets/images/Assignments/P5/available_donations_filtered.png)
+
+
+__Food Claims:__
+
+(Completed Claims)
+![Claim](/assets/images/Assignments/P5/completed_pickup_claims.png)
+
+(Pending Claims)
+![Claim](/assets/images/Assignments/P5/pending_claims.png)
+
+
+__Food Deliveries:__
+
+(Order Tracker)
+![Delivery](/assets/images/Assignments/P5/order_tracker.png)
+
+(Deliveries Page)
+![Delivery](/assets/images/Assignments/P5/deliveries.png)
 
 ## Task List
 
