@@ -8,13 +8,24 @@ layout: doc
 
 ## Study Report
 
-### Interview I: Luis
+### Interview I: Luis (Focusing on Volunteer/Recipient Experiences)
 My test subject was a friend in Course 6 but not in 6.104, one of the friends I used during my individual A6. He found that the three sign up buttons were self explanatory for their roles, and he created an account and logged in without any qualms, both for volunteer and for recipient, which are what we tested today. They saw the sidebar icon and were able to go to account settings to update their information without any hints, completing task one. Moving on to task 2, once logged in he returned to available donations, and effortlessly claimed for pickup. When prompted to message the donor, he went to messages first, only to find that you can’t initiate a new message from there, only continue existing conversations. He then went to my claims and found the button there. I roleplayed as the donor from my device and he saw that the messages showed up just fine. Unlike the two prior reports, unclaiming did work for him seamlessly. For task 3, he claimed an item after filtering by tags. Despite the hint text, the dropdown arrow was not immediately obvious, he was trying to type the tags first. While add tag works just fine, he suggested that we should integrate the cleaner filters in other apps, where you type and then a plus shows up at the end to add it as a filter. That is not a critical bug though, just a minor enhancement. However, he found it slightly inconsistent that when selecting from the dropdown, the tag automatically shows up, while for typing, you have to click add tag. He said that maybe the dropdown selection should appear in the text box to click add tag, while it’s one more click, it’s more consistent.
 
 For tasks four and five, the user was able to do everything, though he said that the maps felt a little cramped and tiny in the form. “Imagine this on a phone,” he said on our laptops. Regardless, he did everything without any difficulties, and followed the intuitive flows to message the driver and track his order in the order tracker, though his gripe is that he has to manually check the donor / driver messages for a reply as there is no notification system. I tell him that a notification system would be hard to implement at this stage and would require more advanced programming. 
 Moving onto volunteers, a lot of the tasks are similar to the recipients, but in the ones that differ, he liked that the pickup and delivery location and distance were clearly shown. Though he thinks the delivery requests should be sorted by distance or expiration date instead of the somewhat arbitrary order it is now, which is a valuable suggestion. He also thinks the maps should be bigger here, as they are crucial for the driver.
 
 But aside from these suggestions, we found no serious bugs, and he was able to guide himself throughout the interface largely without hints or suggestions.
+
+### Interview II: Nicole (Focusing on Restaurant Side)
+
+I believe the overall test with Nicole was successful and we were able to get more insight into a Restaurant associated individual potential use of this app. Nicole is a college student whose family owns a restaurant, and she has spent large amounts of her time helping out there, so we decided to interview Nicole both as a Restaurant user and as a Recipient user. I initially asked her to create an account with his real age and then asked her to create an account as a Restaurant. Initially, she clicked on the login button, attempting to enter a username and password, but then realized after seeing the popup message that she had to create a Restaurant account. The popup message was able to help Nicole easily navigate from her initial detour and properly register her Restaurant account.
+
+Moving on to posting donation items, Nicole was able to smoothly navigate through the functionalities of item posting. An instance where she hesitated, we when she entered two words “spicy, meat” separated by a comma as a tag in her donation post. She saw an error message popup and realized that each tag had to be entered separately as a singular word. This demonstrated that our error messages were properly placed and also informative enough for the user to know how to adjust their actions accordingly. 
+
+Nicole was able to pick up messaging for both Restaurant and Recipient users relatively easily. She swiftly navigated to both the “my messages” tab in the sidebar as well as “message recipient” and “message driver” under each claimed post. Throughout this process, she was able to converse and answer questions smoothly from recipients and volunteers.
+Moving on to the Recipient user, she gravitated towards using tags to filter the posts that were being displayed. Although she only selected tags from the dropdown bar and did not attempt to use manual input. When I asked her why she didn’t choose to do manual entry, she told me that she actually did not know that feature existed since the add tag button was a bit small. It will be important for us to consider tweaking the UI to make it more obvious to the user that both manual entry and dropdown selection are viable options for adding tags for donation filtering. 
+
+Overall, Nicole had a positive user experience and could see her family possibly using this app from time to time.
 
 
 ## Opportunities for Improvement
@@ -185,3 +196,5 @@ Users reported that the dark-orange add button closely resembled the red delete 
 
 
 ## Demo Video Link
+
+https://drive.google.com/file/d/1HmPJTvV0oKi3eDhTaHSeDtDwsRJx5A4O/view?usp=sharing
