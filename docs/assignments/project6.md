@@ -37,6 +37,21 @@ Moving on to the Recipient user, she gravitated towards using tags to filter the
 Overall, Nicole had a positive user experience and could see her family possibly using this app from time to time.
 
 
+### Interview III: Andy (Volunteer, Recipient)
+
+I interviewed Andy, who is an MIT senior in Course 2, for the roles of volunteer and recipient. When starting as a recipient, Andy was initially unsure about whether to click ‘log in’ or one of the role-specific buttons to register as a new user, but other than that, was smoothly able to register with a new account. He was also able to navigate through the account settings to update his information without any hints needed, but ran into some confusion when updating his password. Since the censored password on the website was hardcoded, when he updated his password to one of a shorter length, the censored password didn’t update. Since he got a notification saying his password had successfully been updated, he was able to confirm that his action was successful, but noted that “the censored password displayed has more characters than are in my actual password, which is a bit confusing.”
+
+Andy was also successfully able to claim an item without confusion, but when asked to message the donor, he ran into some confusion and struggled to find the “my claims” tab in the sidebar for a moment. He initially went to the “messages” tab instead, but after seeing that there weren’t any message chains, then went to the “my claims” tab and was able to find how to message a donor. He also mentioned, “I guess I expected people from my order to be prepopulated on the messaging page,” suggesting that we can make the process of messaging more streamlined for our participants by adding shortcuts to directly start a new chat with the relevant people.
+
+The tagging feature was also a point of interest. Andy used the manual tag input but overlooked the dropdown entirely. He explained, “I didn’t even notice the dropdown--it didn’t stand out to me. I just went straight to typing because that felt faster.” This indicates that while manual input is helpful, the dropdown feature might benefit from more visibility or labeling to help guide users.
+
+Despite these small challenges, Andy generally found the claiming process intuitive, saying, "Once I figured it out, it was easy enough to go back and claim another item or message the donor."
+
+For the Volunteer tasks, Andy was asked to claim a delivery request and mark the item as picked up. He quickly navigated to the delivery requests page, saying, “This feels pretty natural, like selecting orders for delivery apps.” He also had some observations about messaging, noting that while the functionality was clear, the layout felt a bit cluttered with some overly contrasting lines that he described as “a bit jarring.” He also mentioned that a notification badge on the message tab would be useful, stating that “if I hadn’t clicked around, I might not have known I had a message waiting.” 
+
+However, overall, he said that the flow of the app was very logical and clear, and “easy to get the hang of.” 
+
+
 ## Opportunities for Improvement
 
 1. Add Tag Donations Filtering Clarity
@@ -206,4 +221,4 @@ Users reported that the dark-orange add button closely resembled the red delete 
 
 ## Demo Video Link
 
-https://drive.google.com/file/d/1HmPJTvV0oKi3eDhTaHSeDtDwsRJx5A4O/view?usp=sharing
+https://drive.google.com/file/d/1sF6V_4zXua2A9-ODsSDU0pCDdvHD_KqD/view
