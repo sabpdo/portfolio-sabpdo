@@ -6,6 +6,15 @@ layout: doc
 
 # Project 6: User Testing and Final Release
 
+## Link to Website
+
+Link To Website: https://leftover-love.vercel.app/welcome
+
+## Repo 
+
+https://github.com/emilymchen/leftover-love
+
+
 ## Study Report
 
 ### Interview I: Luis (Focusing on Volunteer/Recipient Experiences)
