@@ -1,6 +1,6 @@
-# Static Site Template
+# Sabrina's 6.1040 Portfolio
 
-This is a barebones template repo built to make setup and deploying your static site to Github pages easier! The overall process is as follows: make a repo from this template, set up Node/VitePress, and then deploy to Github pages. The steps are detailed below! You can check out an example [here](https://61040-fa24.github.io/portfolio-dhua). If you have any questions, feel free to ask on Discourse or attend studio hours.
+Make a repo from this template, set up Node/VitePress, and then deploy to Github pages. The steps are detailed below! You can check out an example [here](https://61040-fa24.github.io/portfolio-dhua). If you have any questions, feel free to ask on Discourse or attend studio hours.
 
 ## Useful links
 
